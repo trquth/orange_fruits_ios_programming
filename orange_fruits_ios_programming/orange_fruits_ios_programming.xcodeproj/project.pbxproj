@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04C8B8261FE2558000C481CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8B8251FE2558000C481CA /* ViewController.swift */; };
 		04C8B8291FE2649800C481CA /* ButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8B8281FE2649800C481CA /* ButtonController.swift */; };
+		04C8B82C1FE2793700C481CA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8B82B1FE2793700C481CA /* ImageViewController.swift */; };
 		6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */; };
 		6E098F531FE1773F008A97D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F511FE1773F008A97D0 /* Main.storyboard */; };
 		6E098F551FE1773F008A97D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F541FE1773F008A97D0 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		04C8B8251FE2558000C481CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04C8B8281FE2649800C481CA /* ButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonController.swift; sourceTree = "<group>"; };
+		04C8B82B1FE2793700C481CA /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		6E098F4A1FE1773F008A97D0 /* orange_fruits_ios_programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orange_fruits_ios_programming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E098F521FE1773F008A97D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		04C8B82A1FE278DC00C481CA /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				04C8B82B1FE2793700C481CA /* ImageViewController.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
 		6E098F411FE1773F008A97D0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */ = {
 			isa = PBXGroup;
 			children = (
+				04C8B82A1FE278DC00C481CA /* ImageView */,
 				04C8B8271FE2647000C481CA /* Button */,
 				04C8B8241FE2554A00C481CA /* View */,
 				6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */,
@@ -157,6 +168,7 @@
 			files = (
 				04C8B8261FE2558000C481CA /* ViewController.swift in Sources */,
 				04C8B8291FE2649800C481CA /* ButtonController.swift in Sources */,
+				04C8B82C1FE2793700C481CA /* ImageViewController.swift in Sources */,
 				6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
