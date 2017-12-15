@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldController: UIViewController {
+class TextFieldController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +25,7 @@ class TextFieldController: UIViewController {
         textField.textColor = .black
         textField.font = UIFont(name: "Sinhala Sangam MN", size: 15)
         textField.placeholder = "Input text value"
-        textField.isSecureTextEntry = true
+        textField.isSecureTextEntry = false
         
         textField.borderStyle = UITextBorderStyle.roundedRect
         
@@ -44,8 +44,7 @@ class TextFieldController: UIViewController {
         return textField
     }()
     
-    
-    func setupView() {
+    func customTextField() {
         view.addSubview(textField)
         
         let accessoryView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40))
@@ -57,6 +56,7 @@ class TextFieldController: UIViewController {
         accessoryLeft.backgroundColor = .red
         accessoryLeft.layer.cornerRadius = 2
         accessoryLeft.layer.masksToBounds = true
+        accessoryLeft.addTarget(self, action: #selector(cancelButtonClick), for: .touchUpInside)
         
         let accessoryRight = UIButton(frame: CGRect(x: view.bounds.width - 10 - 60 - 10, y: 10, width: 70, height: 20))
         accessoryView.addSubview(accessoryRight)
@@ -64,8 +64,63 @@ class TextFieldController: UIViewController {
         accessoryRight.backgroundColor = .blue
         accessoryRight.layer.cornerRadius = 2
         accessoryRight.layer.masksToBounds = true
+        accessoryRight.addTarget(self, action: #selector(confirmButtonClick), for: .touchUpInside)
         
+        textField.delegate = self
         textField.inputAccessoryView = accessoryView
-        
     }
+    
+    func setupView() {
+        
+        customTextField()
+    }
+    
+    @objc func cancelButtonClick() {
+        print("Click cancel button")
+    }
+    
+    @objc func confirmButtonClick()  {
+        print("Click conform button")
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("1 - textFieldShouldBeginEditing")
+        
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("2 - textFieldDidBeginEditing")
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("3 - textField")
+        
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("4 - textFieldShouldEndEditing")
+        print("text: \(textField.text)")
+        
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        print("5 - textFieldDidEndEditing")
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("6 - textFieldShouldClear")
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("7 - textFieldShouldReturn")
+        
+        return true
+    }
+    
+    
 }
