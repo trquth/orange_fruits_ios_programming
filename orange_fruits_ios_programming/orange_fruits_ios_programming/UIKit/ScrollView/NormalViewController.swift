@@ -16,9 +16,15 @@ class NormalViewController: UIViewController, UIScrollViewDelegate {
 
         navigationController?.navigationBar.isTranslucent = true
         
-        self.title = "Normal ScrollView"
+        self.title = "UIKit - ScrollView - Normal"
         
         setupView()
+    }
+    
+    override func loadView() {
+        super.loadView()
+        
+       self.edgesForExtendedLayout = []
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,7 +93,7 @@ class NormalViewController: UIViewController, UIScrollViewDelegate {
         label.text = "FOOTER LABEL"
         label.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 15)
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
         
         label.autoresizingMask = .flexibleTopMargin
         
@@ -111,14 +117,19 @@ class NormalViewController: UIViewController, UIScrollViewDelegate {
         print("2 scrollViewDidScroll")
         
         let offsetY = scrollView.contentOffset.y
+        let y1 = scrollView
+        let y2 = scrollView.contentOffset
         print("offsetY = \(offsetY)")
         
         let offsetYMax = scrollView.contentSize.height
+        let yMax1 = scrollView.contentSize
         print("offsetYMax = \(offsetYMax)")
         let offsetYTmp = offsetYMax - view.bounds.height
+        let viewBounds = view.bounds
+        let viewFram = view.frame
         print("offsetYTmp = \(offsetYTmp)")
         
-        if offsetY <= 0{
+        if offsetY <= 0 {
             var rectHeader = headerLabel.frame
             rectHeader.size.height = offsetY * -1
             headerLabel.frame = rectHeader
@@ -126,11 +137,18 @@ class NormalViewController: UIViewController, UIScrollViewDelegate {
             if offsetY <= -100 {
                 scrollView.contentInset = UIEdgeInsetsMake(80 ,0 ,0 , 0)
             }
+            
         }else{
             let offsetYUp = offsetY - offsetYTmp
             
             var rectFooter = footerLabel.frame
-//            rectFooter.origin
+            rectFooter.origin.y = view.bounds.height - offsetYUp
+            rectFooter.size.height  = offsetYUp
+            footerLabel.frame = rectFooter
+            
+            if offsetYUp >= 100 {
+                scrollView.contentInset = UIEdgeInsetsMake(0, 0, 80, 0)
+            }
         }
     }
     
