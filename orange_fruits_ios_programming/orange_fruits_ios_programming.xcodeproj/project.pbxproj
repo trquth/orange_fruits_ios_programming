@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0488EABE1FE7A2C50080F6F1 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488EABD1FE7A2C50080F6F1 /* TabViewController.swift */; };
+		0488EAC01FE7A4CE0080F6F1 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488EABF1FE7A4CE0080F6F1 /* CustomTabbarController.swift */; };
 		04C8663D1FE3674C00FCEB8F /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8663C1FE3674C00FCEB8F /* TextViewController.swift */; };
 		04C866401FE3762D00FCEB8F /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8663F1FE3762D00FCEB8F /* ScrollViewController.swift */; };
 		04C866421FE3797700FCEB8F /* NormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C866411FE3797700FCEB8F /* NormalViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0488EABD1FE7A2C50080F6F1 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		0488EABF1FE7A4CE0080F6F1 /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		04C8663C1FE3674C00FCEB8F /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		04C8663F1FE3762D00FCEB8F /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		04C866411FE3797700FCEB8F /* NormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0488EAB91FE7A22A0080F6F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0488EABC1FE7A2910080F6F1 /* Tabbar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0488EABC1FE7A2910080F6F1 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				0488EABD1FE7A2C50080F6F1 /* TabViewController.swift */,
+				0488EABF1FE7A4CE0080F6F1 /* CustomTabbarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		04C8663B1FE3673200FCEB8F /* TextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */,
+				0488EAB91FE7A22A0080F6F1 /* Controller */,
 				6E116E3D1FE2C69600A1A478 /* UIKit */,
 				6E098F511FE1773F008A97D0 /* Main.storyboard */,
 				6E098F541FE1773F008A97D0 /* Assets.xcassets */,
@@ -267,12 +289,14 @@
 				04C8B82C1FE2793700C481CA /* ImageViewController.swift in Sources */,
 				04C866401FE3762D00FCEB8F /* ScrollViewController.swift in Sources */,
 				6E0480701FE5884700FB27AB /* Model.swift in Sources */,
+				0488EABE1FE7A2C50080F6F1 /* TabViewController.swift in Sources */,
 				6E116E401FE2CAD000A1A478 /* TextFieldController.swift in Sources */,
 				6E098F611FE178C4008A97D0 /* LabelController.swift in Sources */,
 				04C8663D1FE3674C00FCEB8F /* TextViewController.swift in Sources */,
 				04C866421FE3797700FCEB8F /* NormalViewController.swift in Sources */,
 				6E07A73C1FE6685B0077ADFF /* WindowController.swift in Sources */,
 				6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */,
+				0488EAC01FE7A4CE0080F6F1 /* CustomTabbarController.swift in Sources */,
 				6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
