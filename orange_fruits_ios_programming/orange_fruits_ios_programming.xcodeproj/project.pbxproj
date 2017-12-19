@@ -15,6 +15,8 @@
 		04C8B8261FE2558000C481CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8B8251FE2558000C481CA /* ViewController.swift */; };
 		04C8B8291FE2649800C481CA /* ButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8B8281FE2649800C481CA /* ButtonController.swift */; };
 		04C8B82C1FE2793700C481CA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8B82B1FE2793700C481CA /* ImageViewController.swift */; };
+		04E400E71FE9056D008C55E1 /* NetworkingTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E400E61FE9056D008C55E1 /* NetworkingTableController.swift */; };
+		04E400E91FE90FE6008C55E1 /* BasicNetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E400E81FE90FE6008C55E1 /* BasicNetworkingController.swift */; };
 		6E0480691FE53B9600FB27AB /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0480681FE53B9600FB27AB /* PageViewController.swift */; };
 		6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04806B1FE575CF00FB27AB /* CollectionViewController.swift */; };
 		6E04806E1FE57DBA00FB27AB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04806D1FE57DBA00FB27AB /* CollectionViewCell.swift */; };
@@ -39,6 +41,8 @@
 		04C8B8251FE2558000C481CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04C8B8281FE2649800C481CA /* ButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonController.swift; sourceTree = "<group>"; };
 		04C8B82B1FE2793700C481CA /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		04E400E61FE9056D008C55E1 /* NetworkingTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTableController.swift; sourceTree = "<group>"; };
+		04E400E81FE90FE6008C55E1 /* BasicNetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNetworkingController.swift; sourceTree = "<group>"; };
 		6E0480681FE53B9600FB27AB /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		6E04806B1FE575CF00FB27AB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6E04806D1FE57DBA00FB27AB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 			path = ImageView;
 			sourceTree = "<group>";
 		};
+		04E400E51FE90509008C55E1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04E400E61FE9056D008C55E1 /* NetworkingTableController.swift */,
+				04E400E81FE90FE6008C55E1 /* BasicNetworkingController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		6E04806A1FE575B500FB27AB /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */,
+				04E400E51FE90509008C55E1 /* Networking */,
 				0488EAB91FE7A22A0080F6F1 /* Controller */,
 				6E116E3D1FE2C69600A1A478 /* UIKit */,
 				6E098F511FE1773F008A97D0 /* Main.storyboard */,
@@ -292,9 +306,11 @@
 				0488EABE1FE7A2C50080F6F1 /* TabViewController.swift in Sources */,
 				6E116E401FE2CAD000A1A478 /* TextFieldController.swift in Sources */,
 				6E098F611FE178C4008A97D0 /* LabelController.swift in Sources */,
+				04E400E71FE9056D008C55E1 /* NetworkingTableController.swift in Sources */,
 				04C8663D1FE3674C00FCEB8F /* TextViewController.swift in Sources */,
 				04C866421FE3797700FCEB8F /* NormalViewController.swift in Sources */,
 				6E07A73C1FE6685B0077ADFF /* WindowController.swift in Sources */,
+				04E400E91FE90FE6008C55E1 /* BasicNetworkingController.swift in Sources */,
 				6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */,
 				0488EAC01FE7A4CE0080F6F1 /* CustomTabbarController.swift in Sources */,
 				6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */,
