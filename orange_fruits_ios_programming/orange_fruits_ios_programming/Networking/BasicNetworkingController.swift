@@ -24,6 +24,8 @@ class BasicNetworkingController: UIViewController, UITableViewDelegate, UITableV
         mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
         setupView()
+        
+        requestWithParameter()
     }
     
     override func loadView() {
@@ -63,23 +65,35 @@ class BasicNetworkingController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func requestWithParameter(){
-        let url: NSURL = NSURL(string: "\(Constants.twitterUrl)followers/list.json")!
-        let request: NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
-        
+        let url = URL(string: "http://jsonplaceholder.typicode.com/posts/1")!
+        let request = MutableURLRequest(url: url)
         request.httpMethod = "GET"
+        request.addValue("Bearer \(Constants.accessToken)", forHTTPHeaderField: "Authorization")
         
-        request.addValue("KvAiQvPTbcDe1LHUXpPasGxkx", forHTTPHeaderField: "Consumer Key")
-        request.addValue("KZU4ur3UKhK9ns4QWURw4LwnkoQr2j80frRDBd9rc951LNEvZv", forHTTPHeaderField: "Consumer Secret")
-        request.addValue("707505086247804929-K8SeCIaCCzzB76WrcevKpCLQ551gXQr", forHTTPHeaderField: "Access Token")
-        request.addValue("rEwMv7hoNMGN8500ZbHyuoSuxs7SP4bO0farGAvzW0LQY", forHTTPHeaderField: "Token Secret")
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration)
+        //let session = URLSession.shared
         
-        let configuration: URLSessionConfiguration = URLSessionConfiguration.default
-        let session: URLSession = URLSession(configuration: configuration)
-        
-        let task: URLSessionDataTask = session.dataTask(with: request, completionHandler: {
-            (data,response, error) -> Void in
-            if error == nil{
-                
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
+            guard error == nil else {
+                print("With error \(error)")
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Don't receive data")
+                return
+            }
+            
+            do {
+                guard let data = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: AnyObject] else {
+                    print("Error when try to convert data to JSON")
+                    return
+                }
+                print("Data \(data)")
+            } catch {
+                print("Some problems happen when convert data to JSON")
+                return
             }
         })
         
