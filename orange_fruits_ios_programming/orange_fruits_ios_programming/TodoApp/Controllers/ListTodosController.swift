@@ -10,6 +10,8 @@ import UIKit
 
 class ListTodosController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    let footerId = "FooterTodoTable"
+    
     var mainTableView : UITableView!
     var mainArray : NSMutableArray!
     
@@ -22,15 +24,30 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
     }
     
     func setupViews() {
-        mainTableView = UITableView(frame: self.view.bounds, style: .plain)
+        mainTableView = UITableView(frame: .zero, style: .plain)
+        
         view.addSubview(mainTableView)
+        view.backgroundColor = .red
         
         mainTableView.dataSource = self
         mainTableView.delegate = self
         
+        mainTableView.sectionFooterHeight = 80
+        
         mainTableView.backgroundColor = UIColor.clear
         
         mainTableView.isScrollEnabled = true
+        
+        mainTableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        mainTableView.register(FooterTodoTableView.self, forHeaderFooterViewReuseIdentifier: footerId)
+        
+        let views = ["v1" : mainTableView] as [String: Any]
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: views))
+       view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: [], metrics: nil, views: views))
+        
+        
         
     }
     
@@ -66,6 +83,10 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showAlert("Edit item in row \(indexPath.row)")
     }
@@ -79,6 +100,11 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
         delete.backgroundColor = UIColor.red
         
         return [delete]
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: footerId)
+        return footer
     }
     
     func showAlert(_ messsage: String)  {
