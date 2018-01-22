@@ -30,11 +30,14 @@
 		6E098F611FE178C4008A97D0 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F601FE178C4008A97D0 /* LabelController.swift */; };
 		6E116E401FE2CAD000A1A478 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E116E3F1FE2CAD000A1A478 /* TextFieldController.swift */; };
 		6E13B043200F827300B0C22F /* ListTodosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E13B042200F827300B0C22F /* ListTodosController.swift */; };
+		6E2990732013A9D70076CDEE /* ListTodosController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2990722013A9D70076CDEE /* ListTodosController+Extension.swift */; };
 		6E48AC3E1FE615B50058ECBB /* CollectionReusableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E48AC3D1FE615B50058ECBB /* CollectionReusableViewHeader.swift */; };
 		6E48AC401FE615D10058ECBB /* CollectionReusableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E48AC3F1FE615D10058ECBB /* CollectionReusableViewFooter.swift */; };
 		6E4ED6E31FFFC3330010E72F /* ConvertJSONByBasicWayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4ED6E21FFFC3330010E72F /* ConvertJSONByBasicWayController.swift */; };
 		6E4ED6E51FFFC7C90010E72F /* TodoModelWithInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4ED6E41FFFC7C90010E72F /* TodoModelWithInit.swift */; };
 		6E9B743A1FF52CD0007A1B20 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B74391FF52CD0007A1B20 /* Todo.swift */; };
+		6EA967FA2013908A0014E88C /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA967F92013908A0014E88C /* CustomHeaderView.swift */; };
+		6EA967FC2013A3500014E88C /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA967FB2013A3500014E88C /* CustomFooterView.swift */; };
 		6EBF916D1FF3F0BC00F263A0 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF916C1FF3F0BC00F263A0 /* PostModel.swift */; };
 		6ECC16281FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC16271FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift */; };
 		6ECC162A1FEF8827000F8E9F /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC16291FEF8827000F8E9F /* ButtonStyle.swift */; };
@@ -69,11 +72,14 @@
 		6E098F601FE178C4008A97D0 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
 		6E116E3F1FE2CAD000A1A478 /* TextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
 		6E13B042200F827300B0C22F /* ListTodosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTodosController.swift; sourceTree = "<group>"; };
+		6E2990722013A9D70076CDEE /* ListTodosController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListTodosController+Extension.swift"; sourceTree = "<group>"; };
 		6E48AC3D1FE615B50058ECBB /* CollectionReusableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewHeader.swift; sourceTree = "<group>"; };
 		6E48AC3F1FE615D10058ECBB /* CollectionReusableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewFooter.swift; sourceTree = "<group>"; };
 		6E4ED6E21FFFC3330010E72F /* ConvertJSONByBasicWayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertJSONByBasicWayController.swift; sourceTree = "<group>"; };
 		6E4ED6E41FFFC7C90010E72F /* TodoModelWithInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModelWithInit.swift; sourceTree = "<group>"; };
 		6E9B74391FF52CD0007A1B20 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		6EA967F92013908A0014E88C /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		6EA967FB2013A3500014E88C /* CustomFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
 		6EBF916C1FF3F0BC00F263A0 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		6ECC16271FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingAPIWithoutThirdPartyController.swift; sourceTree = "<group>"; };
 		6ECC16291FEF8827000F8E9F /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
@@ -272,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				6E13B042200F827300B0C22F /* ListTodosController.swift */,
+				6E2990722013A9D70076CDEE /* ListTodosController+Extension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +288,8 @@
 			children = (
 				6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */,
 				6EF4E8ED2010EF9D00A61FA4 /* FooterTodoTableView.swift */,
+				6EA967F92013908A0014E88C /* CustomHeaderView.swift */,
+				6EA967FB2013A3500014E88C /* CustomFooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2990732013A9D70076CDEE /* ListTodosController+Extension.swift in Sources */,
 				04C8B8261FE2558000C481CA /* ViewController.swift in Sources */,
 				6E0480691FE53B9600FB27AB /* PageViewController.swift in Sources */,
 				6E48AC401FE615D10058ECBB /* CollectionReusableViewFooter.swift in Sources */,
@@ -390,12 +400,14 @@
 				04A3D3DC1FEA0F3F00B26746 /* Constants.swift in Sources */,
 				04C866421FE3797700FCEB8F /* NormalViewController.swift in Sources */,
 				6E07A73C1FE6685B0077ADFF /* WindowController.swift in Sources */,
+				6EA967FA2013908A0014E88C /* CustomHeaderView.swift in Sources */,
 				04E400E91FE90FE6008C55E1 /* BasicNetworkingController.swift in Sources */,
 				6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */,
 				6EBF916D1FF3F0BC00F263A0 /* PostModel.swift in Sources */,
 				6E13B043200F827300B0C22F /* ListTodosController.swift in Sources */,
 				0488EAC01FE7A4CE0080F6F1 /* CustomTabbarController.swift in Sources */,
 				6E4ED6E31FFFC3330010E72F /* ConvertJSONByBasicWayController.swift in Sources */,
+				6EA967FC2013A3500014E88C /* CustomFooterView.swift in Sources */,
 				6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */,
 				6ECC16281FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift in Sources */,
 			);

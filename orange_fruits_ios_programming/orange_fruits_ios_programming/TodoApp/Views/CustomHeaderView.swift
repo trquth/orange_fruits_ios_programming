@@ -1,17 +1,17 @@
 //
-//  HeaderTodoTableView.swift
+//  CustomHeadView.swift
 //  orange_fruits_ios_programming
 //
-//  Created by Thien Tran on 1/18/18.
+//  Created by Thien Tran on 1/20/18.
 //  Copyright © 2018 Thien Tran. All rights reserved.
 //
 
 import UIKit
 
-class HeaderTodoTableView : UITableViewHeaderFooterView{
+class CustomHeaderView : UIView {
     
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         setupViews()
     }
@@ -35,14 +35,17 @@ class HeaderTodoTableView : UITableViewHeaderFooterView{
         progress.progressViewStyle = .bar
         progress.setProgress(0.8, animated: true)
         
-//        progress.progressTintColor = .red
-//        progress.trackTintColor = .brown
-//        progress.tintColor = .green
+        //        progress.progressTintColor = .red
+        //        progress.trackTintColor = .brown
+        //        progress.tintColor = .green
         
         return progress
     }()
     
     fileprivate func setupViews(){
+        
+        self.backgroundColor = .white
+        
         addSubview(titleLabel)
         addSubview(progressView)
         
@@ -51,7 +54,9 @@ class HeaderTodoTableView : UITableViewHeaderFooterView{
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v1]|", options: [], metrics: nil, views: views))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v2]|", options: [], metrics: nil, views: views))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[v1][v2(2)]|", options: [], metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v1]-10-[v2(2)]|", options: [], metrics: nil, views: views))
         
     }
+    
+    
 }

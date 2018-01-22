@@ -10,45 +10,75 @@ import UIKit
 
 class ListTodosController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    let footerId = "FooterTodoTable"
+    private let footerId = "FooterTodoTable"
+    private let headerId = "HeaderTodoTable"
+    private let customHeaderId = "CustomHeaderId"
     
-    var mainTableView : UITableView!
     var mainArray : NSMutableArray!
     
     override func viewDidLoad() {
-        
-        navigationItem.title = "Todos"
-        
+    
         showAllFonts()
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
+    let mainTableView : UITableView = {
+        let table = UITableView(frame: .zero, style: .plain)
+        table.translatesAutoresizingMaskIntoConstraints = false
+        
+        table.isScrollEnabled = true
+        table.showsVerticalScrollIndicator = false
+        
+        table.backgroundColor = UIColor.clear
+        //table.sectionFooterHeight = 80
+        //mainTableView.sectionHeaderHeight = 100
+        
+        return table
+    }()
+    
+    let customHeaderView : CustomHeaderView = {
+        let header = CustomHeaderView(frame: .zero)
+        header.translatesAutoresizingMaskIntoConstraints = false
+        
+        return header
+    }()
+    
+    let customFooterView : CustomFooterView = {
+        let footer = CustomFooterView(frame: .zero)
+        footer.translatesAutoresizingMaskIntoConstraints = false
+        return footer
+    }()
+    
     func setupViews() {
-        mainTableView = UITableView(frame: .zero, style: .plain)
+        view.backgroundColor = .red
         
         view.addSubview(mainTableView)
-        view.backgroundColor = .red
         
         mainTableView.dataSource = self
         mainTableView.delegate = self
         
-        mainTableView.sectionFooterHeight = 80
+        //mainTableView.register(FooterTodoTableView.self, forHeaderFooterViewReuseIdentifier: footerId)
+        //mainTableView.register(HeaderTodoTableView.self, forHeaderFooterViewReuseIdentifier: headerId)
         
-        mainTableView.backgroundColor = UIColor.clear
+        view.addSubview(customHeaderView)
+        view.addSubview(customFooterView)
         
-        mainTableView.isScrollEnabled = true
-        
-        mainTableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        mainTableView.register(FooterTodoTableView.self, forHeaderFooterViewReuseIdentifier: footerId)
-        
-        let views = ["v1" : mainTableView] as [String: Any]
+        let views = ["v1" : mainTableView,
+                     "v2" : customHeaderView,
+                     "v3" : customFooterView]
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: views))
-       view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v2][v1][v3(80)]|", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v2]|", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v3]|", options: [], metrics: nil, views: views))
         
-        
-        
+        view.addConstraint(NSLayoutConstraint(item: customHeaderView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 90))
     }
     
     func showAllFonts() {
@@ -102,10 +132,15 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
         return [delete]
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: footerId)
-        return footer
-    }
+    //    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    //        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: footerId)
+    //        return footer
+    //    }
+    
+    //        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    //            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerId)
+    //            return header
+    //        }
     
     func showAlert(_ messsage: String)  {
         let alertView = UIAlertView(title: "Alert", message: messsage, delegate: nil, cancelButtonTitle: "OK")

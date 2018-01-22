@@ -1,4 +1,14 @@
 //
+//  CustomFooterView.swift
+//  orange_fruits_ios_programming
+//
+//  Created by Thien Tran on 1/20/18.
+//  Copyright © 2018 Thien Tran. All rights reserved.
+//
+
+import UIKit
+
+//
 //  FooterTodoTableView.swift
 //  orange_fruits_ios_programming
 //
@@ -8,10 +18,9 @@
 
 import UIKit
 
-class FooterTodoTableView : UITableViewHeaderFooterView{
-   
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+class CustomFooterView : UIView{
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         setupView()
     }
@@ -56,8 +65,8 @@ class FooterTodoTableView : UITableViewHeaderFooterView{
         return button
     }()
     
-     func setupView()  {
-        contentView.backgroundColor = .white
+    func setupView()  {
+        self.backgroundColor = .white
         addSubview(connectedLabel)
         addSubview(connectedStatusLabel)
         addSubview(addNewTodoButton)
@@ -73,9 +82,10 @@ class FooterTodoTableView : UITableViewHeaderFooterView{
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v2]", options:[], metrics: nil, views: views))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v3(50)]", options:[], metrics: nil, views: views))
         
-        addConstraint(NSLayoutConstraint(item: connectedLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: connectedStatusLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: addNewTodoButton, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: connectedLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: connectedStatusLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: addNewTodoButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
         
     }
 }
+
