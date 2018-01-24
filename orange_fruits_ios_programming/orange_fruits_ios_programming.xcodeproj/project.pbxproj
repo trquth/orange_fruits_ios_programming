@@ -39,9 +39,11 @@
 		6EA967FA2013908A0014E88C /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA967F92013908A0014E88C /* CustomHeaderView.swift */; };
 		6EA967FC2013A3500014E88C /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA967FB2013A3500014E88C /* CustomFooterView.swift */; };
 		6EBF916D1FF3F0BC00F263A0 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF916C1FF3F0BC00F263A0 /* PostModel.swift */; };
+		6ECBDBC52018C3B600383707 /* VisualEffectBlurPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECBDBC42018C3B600383707 /* VisualEffectBlurPopup.swift */; };
 		6ECC16281FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC16271FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift */; };
 		6ECC162A1FEF8827000F8E9F /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC16291FEF8827000F8E9F /* ButtonStyle.swift */; };
 		6ECC162C1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC162B1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift */; };
+		6ECDC57420176DB60072CF35 /* CreateTodoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDC57320176DB60072CF35 /* CreateTodoModal.swift */; };
 		6EF4E8EC2010EF8A00A61FA4 /* HeaderTodoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */; };
 		6EF4E8EE2010EF9D00A61FA4 /* FooterTodoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4E8ED2010EF9D00A61FA4 /* FooterTodoTableView.swift */; };
 /* End PBXBuildFile section */
@@ -81,9 +83,11 @@
 		6EA967F92013908A0014E88C /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		6EA967FB2013A3500014E88C /* CustomFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
 		6EBF916C1FF3F0BC00F263A0 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		6ECBDBC42018C3B600383707 /* VisualEffectBlurPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlurPopup.swift; sourceTree = "<group>"; };
 		6ECC16271FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingAPIWithoutThirdPartyController.swift; sourceTree = "<group>"; };
 		6ECC16291FEF8827000F8E9F /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		6ECC162B1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingAPIWithoutThirdPartyHelper.swift; sourceTree = "<group>"; };
+		6ECDC57320176DB60072CF35 /* CreateTodoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTodoModal.swift; sourceTree = "<group>"; };
 		6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTodoTableView.swift; sourceTree = "<group>"; };
 		6EF4E8ED2010EF9D00A61FA4 /* FooterTodoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTodoTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +290,8 @@
 		6E13B044200F835800B0C22F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6ECBDBC42018C3B600383707 /* VisualEffectBlurPopup.swift */,
+				6ECDC57320176DB60072CF35 /* CreateTodoModal.swift */,
 				6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */,
 				6EF4E8ED2010EF9D00A61FA4 /* FooterTodoTableView.swift */,
 				6EA967F92013908A0014E88C /* CustomHeaderView.swift */,
@@ -397,6 +403,7 @@
 				6E098F611FE178C4008A97D0 /* LabelController.swift in Sources */,
 				04E400E71FE9056D008C55E1 /* NetworkingTableController.swift in Sources */,
 				04C8663D1FE3674C00FCEB8F /* TextViewController.swift in Sources */,
+				6ECDC57420176DB60072CF35 /* CreateTodoModal.swift in Sources */,
 				04A3D3DC1FEA0F3F00B26746 /* Constants.swift in Sources */,
 				04C866421FE3797700FCEB8F /* NormalViewController.swift in Sources */,
 				6E07A73C1FE6685B0077ADFF /* WindowController.swift in Sources */,
@@ -409,6 +416,7 @@
 				6E4ED6E31FFFC3330010E72F /* ConvertJSONByBasicWayController.swift in Sources */,
 				6EA967FC2013A3500014E88C /* CustomFooterView.swift in Sources */,
 				6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */,
+				6ECBDBC52018C3B600383707 /* VisualEffectBlurPopup.swift in Sources */,
 				6ECC16281FEF833C000F8E9F /* CallingAPIWithoutThirdPartyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

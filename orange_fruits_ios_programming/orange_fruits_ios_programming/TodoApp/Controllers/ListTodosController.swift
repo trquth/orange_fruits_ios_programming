@@ -15,6 +15,7 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
     private let customHeaderId = "CustomHeaderId"
     
     var mainArray : NSMutableArray!
+    var headerHeightConstraint : NSLayoutConstraint!
     
     override func viewDidLoad() {
     
@@ -78,7 +79,9 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v2]|", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v3]|", options: [], metrics: nil, views: views))
         
-        view.addConstraint(NSLayoutConstraint(item: customHeaderView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 90))
+        headerHeightConstraint = NSLayoutConstraint(item: customHeaderView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 90)
+        
+        view.addConstraints([headerHeightConstraint])
     }
     
     func showAllFonts() {

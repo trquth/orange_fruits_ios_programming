@@ -62,8 +62,15 @@ class CustomFooterView : UIView{
         button.layer.borderWidth =    1
         button.layer.borderColor = UIColor.cyan.cgColor
         
+        button.addTarget(self, action: #selector(addNewTodo), for: .touchUpInside)
+        
         return button
     }()
+    
+    @objc func addNewTodo(){
+        let instance =  CreateTodoModal()
+        instance.addNewTodo()
+    }
     
     func setupView()  {
         self.backgroundColor = .white
