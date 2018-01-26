@@ -68,8 +68,10 @@ class CustomFooterView : UIView{
     }()
     
     @objc func addNewTodo(){
-        let instance =  CreateTodoModal()
-        instance.addNewTodo()
+//        let instance =  CreateTodoModal()
+//        instance.addNewTodo()
+        let modal = CustomModal()
+        modal.show(animated: true)
     }
     
     func setupView()  {
