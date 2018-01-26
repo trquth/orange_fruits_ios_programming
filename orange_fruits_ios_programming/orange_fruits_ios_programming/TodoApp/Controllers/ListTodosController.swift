@@ -21,6 +21,8 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
     
         showAllFonts()
         setupViews()
+        
+        showSubViewOverTopView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,8 +82,28 @@ class ListTodosController : UIViewController, UITableViewDataSource, UITableView
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v3]|", options: [], metrics: nil, views: views))
         
         headerHeightConstraint = NSLayoutConstraint(item: customHeaderView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 90)
-        
+
         view.addConstraints([headerHeightConstraint])
+    }
+    
+    func showSubViewOverTopView() {
+        guard  var topController = UIApplication.shared.delegate?.window??.rootViewController else {
+            return
+        }
+        
+        while let presentedViewController = topController.presentedViewController{
+            topController = presentedViewController
+        }
+        let customModal = CustomModal(frame: .zero)
+        customModal.translatesAutoresizingMaskIntoConstraints = false
+        
+        topController.view.addSubview(customModal)
+        
+        let views = ["v1": customModal]
+        
+        topController.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: views))
+        topController.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: [], metrics: nil, views: views))
+        
     }
     
     func showAllFonts() {

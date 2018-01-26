@@ -44,6 +44,7 @@
 		6ECC162A1FEF8827000F8E9F /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC16291FEF8827000F8E9F /* ButtonStyle.swift */; };
 		6ECC162C1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC162B1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift */; };
 		6ECDC57420176DB60072CF35 /* CreateTodoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDC57320176DB60072CF35 /* CreateTodoModal.swift */; };
+		6EF40FAE201A301400BA56E3 /* CustomModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF40FAD201A301400BA56E3 /* CustomModal.swift */; };
 		6EF4E8EC2010EF8A00A61FA4 /* HeaderTodoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */; };
 		6EF4E8EE2010EF9D00A61FA4 /* FooterTodoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4E8ED2010EF9D00A61FA4 /* FooterTodoTableView.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		6ECC16291FEF8827000F8E9F /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		6ECC162B1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingAPIWithoutThirdPartyHelper.swift; sourceTree = "<group>"; };
 		6ECDC57320176DB60072CF35 /* CreateTodoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTodoModal.swift; sourceTree = "<group>"; };
+		6EF40FAD201A301400BA56E3 /* CustomModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModal.swift; sourceTree = "<group>"; };
 		6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTodoTableView.swift; sourceTree = "<group>"; };
 		6EF4E8ED2010EF9D00A61FA4 /* FooterTodoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTodoTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,6 +292,7 @@
 		6E13B044200F835800B0C22F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6EF40FAC201A2E8A00BA56E3 /* CustomModal */,
 				6ECBDBC42018C3B600383707 /* VisualEffectBlurPopup.swift */,
 				6ECDC57320176DB60072CF35 /* CreateTodoModal.swift */,
 				6EF4E8EB2010EF8A00A61FA4 /* HeaderTodoTableView.swift */,
@@ -308,6 +311,14 @@
 				6E4ED6E41FFFC7C90010E72F /* TodoModelWithInit.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6EF40FAC201A2E8A00BA56E3 /* CustomModal */ = {
+			isa = PBXGroup;
+			children = (
+				6EF40FAD201A301400BA56E3 /* CustomModal.swift */,
+			);
+			path = CustomModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +409,7 @@
 				6E9B743A1FF52CD0007A1B20 /* Todo.swift in Sources */,
 				6E116E401FE2CAD000A1A478 /* TextFieldController.swift in Sources */,
 				6EF4E8EC2010EF8A00A61FA4 /* HeaderTodoTableView.swift in Sources */,
+				6EF40FAE201A301400BA56E3 /* CustomModal.swift in Sources */,
 				6EF4E8EE2010EF9D00A61FA4 /* FooterTodoTableView.swift in Sources */,
 				6ECC162C1FEF930E000F8E9F /* CallingAPIWithoutThirdPartyHelper.swift in Sources */,
 				6E098F611FE178C4008A97D0 /* LabelController.swift in Sources */,
