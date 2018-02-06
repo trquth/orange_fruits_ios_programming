@@ -63,27 +63,27 @@ class BasicNetworkingController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func requestWithParameter(){
-        let url: NSURL = NSURL(string: "\(Constants.twitterUrl)followers/list.json")!
-        let request: NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
-        
-        request.httpMethod = "GET"
-        
-        request.addValue("KvAiQvPTbcDe1LHUXpPasGxkx", forHTTPHeaderField: "Consumer Key")
-        request.addValue("KZU4ur3UKhK9ns4QWURw4LwnkoQr2j80frRDBd9rc951LNEvZv", forHTTPHeaderField: "Consumer Secret")
-        request.addValue("707505086247804929-K8SeCIaCCzzB76WrcevKpCLQ551gXQr", forHTTPHeaderField: "Access Token")
-        request.addValue("rEwMv7hoNMGN8500ZbHyuoSuxs7SP4bO0farGAvzW0LQY", forHTTPHeaderField: "Token Secret")
-        
-        let configuration: URLSessionConfiguration = URLSessionConfiguration.default
-        let session: URLSession = URLSession(configuration: configuration)
-        
-        let task: URLSessionDataTask = session.dataTask(with: request, completionHandler: {
-            (data,response, error) -> Void in
-            if error == nil{
-                
-            }
-        })
-        
-        task.resume()
+//        let url: NSURL = NSURL(string: "\(Constants.twitterUrl)followers/list.json")!
+//        let request: NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
+//        
+//        request.httpMethod = "GET"
+//        
+//        request.addValue("KvAiQvPTbcDe1LHUXpPasGxkx", forHTTPHeaderField: "Consumer Key")
+//        request.addValue("KZU4ur3UKhK9ns4QWURw4LwnkoQr2j80frRDBd9rc951LNEvZv", forHTTPHeaderField: "Consumer Secret")
+//        request.addValue("707505086247804929-K8SeCIaCCzzB76WrcevKpCLQ551gXQr", forHTTPHeaderField: "Access Token")
+//        request.addValue("rEwMv7hoNMGN8500ZbHyuoSuxs7SP4bO0farGAvzW0LQY", forHTTPHeaderField: "Token Secret")
+//        
+//        let configuration: URLSessionConfiguration = URLSessionConfiguration.default
+//        let session: URLSession = URLSession(configuration: configuration)
+//        
+//        let task: URLSessionDataTask = session.dataTask(with: request, completionHandler: {
+//            (data,response, error) -> Void in
+//            if error == nil{
+//                
+//            }
+//        })
+//        
+//        task.resume()
         
     }
     
