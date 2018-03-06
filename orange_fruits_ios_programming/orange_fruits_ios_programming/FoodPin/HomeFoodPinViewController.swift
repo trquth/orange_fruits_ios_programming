@@ -9,7 +9,7 @@
 import UIKit
 
 
-class HomeFoodPinViewController : UIViewController , UITableViewDelegate, UITableViewDataSource{
+class HomeFoodPinViewController : UITableViewController{
     
     private let cellIdentifier = "Cell"
     
@@ -29,11 +29,11 @@ class HomeFoodPinViewController : UIViewController , UITableViewDelegate, UITabl
         super.didReceiveMemoryWarning()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantNames.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! HomeFoodPinTableViewCell
         
         let index = indexPath.row
@@ -45,39 +45,39 @@ class HomeFoodPinViewController : UIViewController , UITableViewDelegate, UITabl
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let optionMenu = UIAlertController(title: "", message: "What do you want to do?", preferredStyle: .actionSheet)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
-            (action : UIAlertAction) -> Void in
-            
-            let cell = tableView.cellForRow(at: indexPath)
-            self.restaurantIsVisited[indexPath.row] = true
-            cell?.accessoryType = .checkmark
-            
-        })
-        
-        let callActionHandler = {(action: UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry again", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
-            self.present(alertMessage, animated: true, completion: nil)
-        }
-        
-        let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-        
-        
-        optionMenu.addAction(checkInAction)
-        optionMenu.addAction(callAction)
-        optionMenu.addAction(cancelAction)
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        present(optionMenu, animated: true, completion: nil)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let optionMenu = UIAlertController(title: "", message: "What do you want to do?", preferredStyle: .actionSheet)
+//        
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        
+//        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
+//            (action : UIAlertAction) -> Void in
+//            
+//            let cell = tableView.cellForRow(at: indexPath)
+//            self.restaurantIsVisited[indexPath.row] = true
+//            cell?.accessoryType = .checkmark
+//            
+//        })
+//        
+//        let callActionHandler = {(action: UIAlertAction!) -> Void in
+//            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry again", preferredStyle: .alert)
+//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            
+//            self.present(alertMessage, animated: true, completion: nil)
+//        }
+//        
+//        let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+//        
+//        
+//        optionMenu.addAction(checkInAction)
+//        optionMenu.addAction(callAction)
+//        optionMenu.addAction(cancelAction)
+//        
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        present(optionMenu, animated: true, completion: nil)
+//    }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let shareAction = UITableViewRowAction(style: .default, title: "Share", handler: {(action, indexPath) -> Void in
             let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
@@ -120,6 +120,16 @@ class HomeFoodPinViewController : UIViewController , UITableViewDelegate, UITabl
     
     override var prefersStatusBarHidden: Bool{
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath =  tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! DetailFoodPinViewController
+                
+                destinationController.restaurantImage = restaurantImages[indexPath.row]
+            }
+        }
     }
     
 }
