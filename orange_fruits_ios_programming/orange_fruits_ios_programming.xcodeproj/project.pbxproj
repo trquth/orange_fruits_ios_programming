@@ -22,6 +22,7 @@
 		6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04806B1FE575CF00FB27AB /* CollectionViewController.swift */; };
 		6E04806E1FE57DBA00FB27AB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04806D1FE57DBA00FB27AB /* CollectionViewCell.swift */; };
 		6E0480701FE5884700FB27AB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04806F1FE5884700FB27AB /* Model.swift */; };
+		6E06CC8020502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E06CC7F20502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift */; };
 		6E07A73C1FE6685B0077ADFF /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07A73B1FE6685B0077ADFF /* WindowController.swift */; };
 		6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */; };
 		6E098F531FE1773F008A97D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F511FE1773F008A97D0 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		6E04806B1FE575CF00FB27AB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6E04806D1FE57DBA00FB27AB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6E04806F1FE5884700FB27AB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6E06CC7F20502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFoodPinTableViewCell.swift; sourceTree = "<group>"; };
 		6E07A73B1FE6685B0077ADFF /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		6E098F4A1FE1773F008A97D0 /* orange_fruits_ios_programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orange_fruits_ios_programming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				6E7BF37F204C20FF002463A7 /* HomeFoodPinTableViewCell.swift */,
 				6E76541A204ED3F3006FFAC3 /* DetailFoodPinViewController.swift */,
 				6E76541C204EEE97006FFAC3 /* Restaurant.swift */,
+				6E06CC7F20502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */,
 				6E7BF37E204BE831002463A7 /* HomeFoodPinViewController.swift in Sources */,
 				0488EAC01FE7A4CE0080F6F1 /* CustomTabbarController.swift in Sources */,
+				6E06CC8020502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift in Sources */,
 				6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */,
 				6E76541B204ED3F3006FFAC3 /* DetailFoodPinViewController.swift in Sources */,
 			);
