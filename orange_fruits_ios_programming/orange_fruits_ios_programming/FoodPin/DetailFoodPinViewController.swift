@@ -25,7 +25,7 @@ class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITab
         restaurantImageView.image = UIImage(named: restaurant.image)
         
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        //tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
         
         title = restaurant.name
@@ -33,8 +33,6 @@ class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITab
         
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMap))
         mapView.addGestureRecognizer(tapGestureRecognizer)
@@ -126,7 +124,10 @@ class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITab
         if segue.identifier == "showReview" {
             let destinationController = segue.destination as! ReviewViewController
             destinationController.restaurant = restaurant
-        }
+            
+        } else if segue.identifier == "showMap" {
+            let destinationController = segue.destination as! MapViewController
+            destinationController.restaurant = restaurant }
     }
     
     @objc func showMap() {

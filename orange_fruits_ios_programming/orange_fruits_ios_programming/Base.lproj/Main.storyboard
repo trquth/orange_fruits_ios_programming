@@ -207,6 +207,18 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-Nr-yyL">
+                                <rect key="frame" x="339" y="72" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="3dv-RK-z0j"/>
+                                    <constraint firstAttribute="height" constant="28" id="reg-H6-oan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="check"/>
+                                <connections>
+                                    <segue destination="IhS-MX-0JH" kind="presentation" identifier="showReview" id="ps3-Kv-zss"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-YV-ioQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,6 +271,7 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
                                         <connections>
                                             <outlet property="fieldLabel" destination="7sg-F2-E8o" id="bNr-hj-pK9"/>
                                             <outlet property="valueLabel" destination="qLb-J5-fKn" id="fUf-jZ-zzM"/>
+                                            <segue destination="IDN-Wn-RiG" kind="show" identifier="showMap" id="V8H-Jb-UhV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -267,18 +280,6 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
                                     <outlet property="delegate" destination="d4Z-C6-AID" id="4af-cM-wRT"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-Nr-yyL">
-                                <rect key="frame" x="339" y="72" width="28" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="28" id="3dv-RK-z0j"/>
-                                    <constraint firstAttribute="height" constant="28" id="reg-H6-oan"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="check"/>
-                                <connections>
-                                    <segue destination="IhS-MX-0JH" kind="presentation" identifier="showReview" id="ps3-Kv-zss"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -295,17 +296,16 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
                         <outlet property="mapView" destination="Slz-84-x20" id="V0D-JE-g3s"/>
                         <outlet property="restaurantImageView" destination="xyb-JQ-xCz" id="8u5-aD-hTh"/>
                         <outlet property="tableView" destination="Fh5-YV-ioQ" id="6ad-Ok-x1T"/>
-                        <segue destination="IDN-Wn-RiG" kind="showDetail" identifier="showMap" id="Vb9-Nt-7Jg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8T-Er-272" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1756" y="-495.20239880059972"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ENB-EC-YiD">
             <objects>
-                <viewController id="IDN-Wn-RiG" sceneMemberID="viewController">
+                <viewController id="IDN-Wn-RiG" customClass="MapViewController" customModule="orange_fruits_ios_programming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CGx-hN-Eim">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,10 +323,13 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lay-u2-HRa"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="CyA-Hu-94t" id="YPH-7h-W7t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4o-2S-kdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="230.73463268365819"/>
+            <point key="canvasLocation" x="1756" y="231.63418290854574"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="pdQ-VP-4Xg">
