@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet var restaurantImageView : UIImageView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var mapView: MKMapView!
     
     var restaurantImage = ""
     
@@ -31,6 +33,38 @@ class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITab
         
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMap))
+        mapView.addGestureRecognizer(tapGestureRecognizer)
+        
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let placemarks = placemarks {
+                // Get the first placemark
+                let placemark = placemarks[0]
+                
+                // Add annotation
+                let annotation = MKPointAnnotation()
+                
+                if let location = placemark.location {
+                    // Display the annotation
+                    annotation.coordinate = location.coordinate
+                    self.mapView.addAnnotation(annotation)
+                    
+                    // Set the zoom level
+                    let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
+                    self.mapView.setRegion(region, animated: false)
+                }
+            }
+            
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
@@ -93,5 +127,9 @@ class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITab
             let destinationController = segue.destination as! ReviewViewController
             destinationController.restaurant = restaurant
         }
+    }
+    
+    @objc func showMap() {
+        performSegue(withIdentifier: "showMap", sender: self)
     }
 }

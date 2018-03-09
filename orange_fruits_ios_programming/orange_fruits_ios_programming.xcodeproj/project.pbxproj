@@ -36,6 +36,7 @@
 		6E76541D204EEE97006FFAC3 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E76541C204EEE97006FFAC3 /* Restaurant.swift */; };
 		6E7BF37E204BE831002463A7 /* HomeFoodPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BF37D204BE831002463A7 /* HomeFoodPinViewController.swift */; };
 		6E7BF380204C20FF002463A7 /* HomeFoodPinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BF37F204C20FF002463A7 /* HomeFoodPinTableViewCell.swift */; };
+		6E83A0412052CB8D00CF3462 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E83A0402052CB8D00CF3462 /* MapKit.framework */; };
 		6EDA2DDC20518B2D00D9FBB3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDA2DDB20518B2D00D9FBB3 /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		6E76541C204EEE97006FFAC3 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		6E7BF37D204BE831002463A7 /* HomeFoodPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodPinViewController.swift; sourceTree = "<group>"; };
 		6E7BF37F204C20FF002463A7 /* HomeFoodPinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodPinTableViewCell.swift; sourceTree = "<group>"; };
+		6E83A0402052CB8D00CF3462 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6EDA2DDB20518B2D00D9FBB3 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E83A0412052CB8D00CF3462 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +182,7 @@
 			children = (
 				6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */,
 				6E098F4B1FE1773F008A97D0 /* Products */,
+				6E83A03F2052CB8D00CF3462 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,6 +271,14 @@
 			path = FoodPin;
 			sourceTree = "<group>";
 		};
+		6E83A03F2052CB8D00CF3462 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E83A0402052CB8D00CF3462 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +312,11 @@
 					6E098F491FE1773F008A97D0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
