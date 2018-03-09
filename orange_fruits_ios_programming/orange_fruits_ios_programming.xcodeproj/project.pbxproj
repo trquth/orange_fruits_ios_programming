@@ -36,6 +36,7 @@
 		6E76541D204EEE97006FFAC3 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E76541C204EEE97006FFAC3 /* Restaurant.swift */; };
 		6E7BF37E204BE831002463A7 /* HomeFoodPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BF37D204BE831002463A7 /* HomeFoodPinViewController.swift */; };
 		6E7BF380204C20FF002463A7 /* HomeFoodPinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BF37F204C20FF002463A7 /* HomeFoodPinTableViewCell.swift */; };
+		6EDA2DDC20518B2D00D9FBB3 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDA2DDB20518B2D00D9FBB3 /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		6E76541C204EEE97006FFAC3 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		6E7BF37D204BE831002463A7 /* HomeFoodPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodPinViewController.swift; sourceTree = "<group>"; };
 		6E7BF37F204C20FF002463A7 /* HomeFoodPinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFoodPinTableViewCell.swift; sourceTree = "<group>"; };
+		6EDA2DDB20518B2D00D9FBB3 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				6E76541A204ED3F3006FFAC3 /* DetailFoodPinViewController.swift */,
 				6E76541C204EEE97006FFAC3 /* Restaurant.swift */,
 				6E06CC7F20502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift */,
+				6EDA2DDB20518B2D00D9FBB3 /* ReviewViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				6E06CC8020502DCA00FB32E5 /* DetailFoodPinTableViewCell.swift in Sources */,
 				6E04806C1FE575CF00FB27AB /* CollectionViewController.swift in Sources */,
 				6E76541B204ED3F3006FFAC3 /* DetailFoodPinViewController.swift in Sources */,
+				6EDA2DDC20518B2D00D9FBB3 /* ReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,4 +67,31 @@ class DetailFoodPinViewController : UIViewController, UITableViewDelegate, UITab
         cell.backgroundColor = UIColor.clear
         return cell
     }
+    
+    @IBAction func close(segue:UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func ratingButtonTapped(segue: UIStoryboardSegue) {
+        if let rating = segue.identifier {
+            
+            restaurant.isVisited = true
+            
+            switch rating {
+            case "great": restaurant.rating = "Absolutely love it! Must try."
+            case "good": restaurant.rating = "Pretty good."
+            case "dislike": restaurant.rating = "I don't like it."
+            default: break }
+            
+        }
+        
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showReview" {
+            let destinationController = segue.destination as! ReviewViewController
+            destinationController.restaurant = restaurant
+        }
+    }
 }
