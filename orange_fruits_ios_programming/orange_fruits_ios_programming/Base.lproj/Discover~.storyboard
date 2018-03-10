@@ -696,6 +696,35 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
             </objects>
             <point key="canvasLocation" x="220" y="232"/>
         </scene>
+        <!--Discover-->
+        <scene sceneID="hfe-QV-edr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ce-Pp-cW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="qgX-EM-eLc" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xjg-kd-vEX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2pg-vw-OEe">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2pg-vw-OEe" id="SCb-rh-vY9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qgX-EM-eLc" id="Q1x-fa-U6f"/>
+                            <outlet property="delegate" destination="qgX-EM-eLc" id="AcH-Wm-aJ7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Discover" id="Jug-Z6-aPS"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="504.80000000000001" y="985.45727136431788"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kuh-Rc-hcI">
             <objects>
@@ -708,12 +737,31 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
                     </tabBar>
                     <connections>
                         <segue destination="Ks8-IB-4Hh" kind="relationship" relationship="viewControllers" id="TOD-S3-Or9"/>
-                        <segue destination="Dun-Ue-rpm" kind="relationship" relationship="viewControllers" id="KQS-5D-9mU"/>
+                        <segue destination="SYR-hu-QmV" kind="relationship" relationship="viewControllers" id="KQS-5D-9mU"/>
                         <segue destination="63O-tF-WMl" kind="relationship" relationship="viewControllers" id="ggg-Sp-UMf"/>
                     </connections>
                 </tabBarController>
             </objects>
             <point key="canvasLocation" x="-606" y="-491"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="D6B-wl-DQ5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMZ-us-aRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SYR-hu-QmV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover" id="9uV-U6-jdd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tCk-ob-aWm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qgX-EM-eLc" kind="relationship" relationship="rootViewController" id="0pr-6P-t39"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-345" y="985"/>
         </scene>
         <!--About-->
         <scene sceneID="5cn-R3-9uX">
@@ -725,22 +773,13 @@ We’ll find you the right developer who can help you in 15 minutes.</string>
             </objects>
             <point key="canvasLocation" x="143" y="-1347"/>
         </scene>
-        <!--Discover-->
-        <scene sceneID="7g4-0S-nI1">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Discover" id="Dun-Ue-rpm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mVE-n2-WBi"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jo0-6W-GAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-345" y="985"/>
-        </scene>
     </scenes>
     <resources>
         <image name="bourkestreetbakery" width="480" height="480"/>
         <image name="cafeloisl" width="480" height="480"/>
         <image name="check" width="28" height="28"/>
         <image name="cross" width="24" height="24"/>
+        <image name="discover" width="25" height="19"/>
         <image name="favorite" width="17" height="25"/>
         <image name="photoalbum" width="64" height="64"/>
         <image name="user1" width="100" height="136"/>

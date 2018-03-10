@@ -32,6 +32,8 @@
 		6E098F611FE178C4008A97D0 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F601FE178C4008A97D0 /* LabelController.swift */; };
 		6E116E401FE2CAD000A1A478 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E116E3F1FE2CAD000A1A478 /* TextFieldController.swift */; };
 		6E3FBB4F205346C400A09C28 /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBB4E205346C400A09C28 /* AddRestaurantController.swift */; };
+		6E3FBB6020536F0C00A09C28 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FBB5F20536F0C00A09C28 /* About.storyboard */; };
+		6E3FBB6320536F3E00A09C28 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FBB6120536F3E00A09C28 /* Discover.storyboard */; };
 		6E48AC3E1FE615B50058ECBB /* CollectionReusableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E48AC3D1FE615B50058ECBB /* CollectionReusableViewHeader.swift */; };
 		6E48AC401FE615D10058ECBB /* CollectionReusableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E48AC3F1FE615D10058ECBB /* CollectionReusableViewFooter.swift */; };
 		6E76541B204ED3F3006FFAC3 /* DetailFoodPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E76541A204ED3F3006FFAC3 /* DetailFoodPinViewController.swift */; };
@@ -70,6 +72,8 @@
 		6E098F601FE178C4008A97D0 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
 		6E116E3F1FE2CAD000A1A478 /* TextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
 		6E3FBB4E205346C400A09C28 /* AddRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
+		6E3FBB5F20536F0C00A09C28 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		6E3FBB6220536F3E00A09C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = orange_fruits_ios_programming/Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		6E48AC3D1FE615B50058ECBB /* CollectionReusableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewHeader.swift; sourceTree = "<group>"; };
 		6E48AC3F1FE615D10058ECBB /* CollectionReusableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewFooter.swift; sourceTree = "<group>"; };
 		6E76541A204ED3F3006FFAC3 /* DetailFoodPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFoodPinViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 		6E098F411FE1773F008A97D0 = {
 			isa = PBXGroup;
 			children = (
+				6E3FBB6120536F3E00A09C28 /* Discover.storyboard */,
+				6E3FBB5F20536F0C00A09C28 /* About.storyboard */,
 				6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */,
 				6E098F4B1FE1773F008A97D0 /* Products */,
 				6E83A03F2052CB8D00CF3462 /* Frameworks */,
@@ -351,6 +357,8 @@
 			files = (
 				6E098F581FE1773F008A97D0 /* LaunchScreen.storyboard in Resources */,
 				6E098F551FE1773F008A97D0 /* Assets.xcassets in Resources */,
+				6E3FBB6320536F3E00A09C28 /* Discover.storyboard in Resources */,
+				6E3FBB6020536F0C00A09C28 /* About.storyboard in Resources */,
 				6E098F531FE1773F008A97D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +419,14 @@
 				6E098F571FE1773F008A97D0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6E3FBB6120536F3E00A09C28 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E3FBB6220536F3E00A09C28 /* Base */,
+			);
+			name = Discover.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
