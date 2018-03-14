@@ -1,24 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wbf-SM-xKR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--One Screen View Controller-->
+        <scene sceneID="Uqe-jK-Qa5">
+            <objects>
+                <viewController id="p4w-Tw-qIU" customClass="OneScreenViewController" customModule="orange_fruits_ios_programming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="evh-qA-EsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are in One Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOQ-Fr-cXn">
+                                <rect key="frame" x="0.0" y="89" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GU-CK-rda">
+                                <rect key="frame" x="137.5" y="144" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Yis-7Y-26U"/>
+                                    <constraint firstAttribute="width" constant="100" id="bTH-Gp-a6J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-fg-Yhr">
+                                <rect key="frame" x="137" y="209" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButton:" destination="p4w-Tw-qIU" eventType="touchUpInside" id="Cva-0l-w4C"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gRG-Si-5Ia">
+                                <rect key="frame" x="99.5" y="274" width="177" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Four" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPc-fh-b4x">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Qh-Cv-Mxq">
+                                        <rect key="frame" x="64" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Five" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIa-aP-bcm">
+                                        <rect key="frame" x="128" y="0.0" width="49" height="31"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsZ-C6-kb9">
+                                <rect key="frame" x="127" y="330" width="120" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KrM-RN-c7g"/>
+                                    <constraint firstAttribute="width" constant="120" id="ePK-Ug-x0C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Two Modal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="modalTwoButton:" destination="p4w-Tw-qIU" eventType="touchUpInside" id="OGj-yi-e0z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gRG-Si-5Ia" firstAttribute="centerX" secondItem="evh-qA-EsQ" secondAttribute="centerX" id="0Du-Bn-nlX"/>
+                            <constraint firstItem="g5O-Zu-J1h" firstAttribute="trailing" secondItem="mOQ-Fr-cXn" secondAttribute="trailing" id="19z-zm-Z5m"/>
+                            <constraint firstItem="2GU-CK-rda" firstAttribute="top" secondItem="mOQ-Fr-cXn" secondAttribute="bottom" constant="25" id="3un-1f-jB2"/>
+                            <constraint firstItem="mOQ-Fr-cXn" firstAttribute="top" secondItem="g5O-Zu-J1h" secondAttribute="top" constant="25" id="AvK-tS-HMZ"/>
+                            <constraint firstItem="gRG-Si-5Ia" firstAttribute="top" secondItem="OnW-fg-Yhr" secondAttribute="bottom" constant="25" id="EaI-JD-eGV"/>
+                            <constraint firstItem="OnW-fg-Yhr" firstAttribute="height" secondItem="2GU-CK-rda" secondAttribute="height" id="NcK-LI-glm"/>
+                            <constraint firstItem="OnW-fg-Yhr" firstAttribute="top" secondItem="2GU-CK-rda" secondAttribute="bottom" constant="25" id="Oqy-ou-REq"/>
+                            <constraint firstItem="BsZ-C6-kb9" firstAttribute="centerX" secondItem="evh-qA-EsQ" secondAttribute="centerX" id="XH3-Ar-PeK"/>
+                            <constraint firstItem="OnW-fg-Yhr" firstAttribute="centerX" secondItem="evh-qA-EsQ" secondAttribute="centerX" id="Zl5-vK-Mf8"/>
+                            <constraint firstItem="BsZ-C6-kb9" firstAttribute="top" secondItem="gRG-Si-5Ia" secondAttribute="bottom" constant="25" id="fkI-Ff-l8h"/>
+                            <constraint firstItem="OnW-fg-Yhr" firstAttribute="width" secondItem="2GU-CK-rda" secondAttribute="width" id="oWM-Ct-pFA"/>
+                            <constraint firstItem="mOQ-Fr-cXn" firstAttribute="leading" secondItem="g5O-Zu-J1h" secondAttribute="leading" id="rSO-OK-O5u"/>
+                            <constraint firstItem="2GU-CK-rda" firstAttribute="centerX" secondItem="evh-qA-EsQ" secondAttribute="centerX" id="uqa-mN-S08"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g5O-Zu-J1h"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I7b-af-zHd"/>
+                    <connections>
+                        <outlet property="fourFiveSwitch" destination="8Qh-Cv-Mxq" id="Ngu-xa-ahe"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showFourScreen" id="h5n-Rt-NYB"/>
+                        <segue destination="QaQ-AR-iEk" kind="show" identifier="showFiveScreen" id="38E-7o-dtN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khk-tn-Pwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471.19999999999999" y="131.78410794602701"/>
+        </scene>
+        <!--Four-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FourScreenViewController" customModule="orange_fruits_ios_programming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are in Four Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSe-Oy-H11">
+                                <rect key="frame" x="58.5" y="318.5" width="258.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sSe-Oy-H11" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7CW-0U-XEX"/>
+                            <constraint firstItem="sSe-Oy-H11" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pla-LU-R7l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Four" id="8xk-QR-Wgr">
+                        <barButtonItem key="rightBarButtonItem" title="Six" id="QNn-mS-gB0">
+                            <connections>
+                                <segue destination="tyx-K7-425" kind="show" id="rsR-Nn-VDe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="11.244377811094454"/>
+        </scene>
+        <!--Fix-->
+        <scene sceneID="MrZ-WR-hJh">
+            <objects>
+                <viewController id="QaQ-AR-iEk" customClass="FiveScreenViewController" customModule="orange_fruits_ios_programming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odd-Hc-Wvp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are in Five Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKv-hj-wsU">
+                                <rect key="frame" x="60" y="318.5" width="254" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YKv-hj-wsU" firstAttribute="centerX" secondItem="odd-Hc-Wvp" secondAttribute="centerX" id="ahj-JD-mhR"/>
+                            <constraint firstItem="YKv-hj-wsU" firstAttribute="centerY" secondItem="odd-Hc-Wvp" secondAttribute="centerY" id="o3N-76-lh0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8os-FN-OQj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fix" id="2pT-dC-v84">
+                        <barButtonItem key="rightBarButtonItem" title="Six" id="keh-jq-oNA">
+                            <connections>
+                                <segue destination="tyx-K7-425" kind="show" id="wxY-7B-WfQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWb-sF-3YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="708.39580209895053"/>
+        </scene>
+        <!--Six Screen View Controller-->
+        <scene sceneID="Rje-CN-ucK">
+            <objects>
+                <viewController id="tyx-K7-425" customClass="SixScreenViewController" customModule="orange_fruits_ios_programming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dnd-MS-scs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are in Six Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-Sp-zPq">
+                                <rect key="frame" x="66" y="89" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ham-ov-4OA">
+                                <rect key="frame" x="80" y="144" width="215" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRa-Kf-Qf4">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7hd-fC-LhJ"/>
+                                            <constraint firstAttribute="width" constant="100" id="B6u-SK-cAZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="tyx-K7-425" eventType="touchUpInside" id="Z7V-pZ-kHD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VC-Yf-ZdK">
+                                        <rect key="frame" x="115" y="0.0" width="100" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="E2K-OU-vYN"/>
+                                            <constraint firstAttribute="width" constant="100" id="tAN-WK-Uct"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Root">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rootButton:" destination="tyx-K7-425" eventType="touchUpInside" id="bY5-c6-cq0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QmP-Sp-zPq" firstAttribute="top" secondItem="hg0-sC-Wbv" secondAttribute="top" constant="25" id="TFF-W7-gEa"/>
+                            <constraint firstItem="ham-ov-4OA" firstAttribute="top" secondItem="QmP-Sp-zPq" secondAttribute="bottom" constant="25" id="WhA-JT-KWn"/>
+                            <constraint firstItem="QmP-Sp-zPq" firstAttribute="centerX" secondItem="dnd-MS-scs" secondAttribute="centerX" id="j9J-y3-68E"/>
+                            <constraint firstItem="ham-ov-4OA" firstAttribute="centerX" secondItem="dnd-MS-scs" secondAttribute="centerX" id="vG9-3J-xmA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hg0-sC-Wbv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBp-Ro-aZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="268"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2LV-Wj-io8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wbf-SM-xKR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ogc-GH-b02">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p4w-Tw-qIU" kind="relationship" relationship="rootViewController" id="RXt-Mf-g3U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAW-vd-hVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1330" y="132"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rsR-Nn-VDe"/>
+    </inferredMetricsTieBreakers>
 </document>
