@@ -27,8 +27,8 @@ class TwoScreenViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
         let threeVC = ThreeScreenViewController(nibName: "ThreeScreenView", bundle: nil)
-        //self.navigationController?.pushViewController(threeVC, animated: true)
-        present(threeVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(threeVC, animated: true)
+//        present(threeVC, animated: true, completion: nil)
     }
     
 }

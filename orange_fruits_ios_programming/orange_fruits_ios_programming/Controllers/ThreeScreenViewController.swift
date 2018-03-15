@@ -17,9 +17,6 @@ class ThreeScreenViewController: UIViewController {
     }
 
     @IBAction func backButton(_ sender: Any) {
-        let x = navigationController
-        let y = self.navigationController
-        let z = self
         navigationController?.popViewController(animated: true)
     }
     

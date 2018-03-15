@@ -28,6 +28,8 @@ class OneScreenViewController: UIViewController {
     @IBAction func modalTwoButton(_ sender: Any) {
         
         let twoVC = TwoScreenViewController(nibName: "TwoScreenView", bundle: nil)
-        present(twoVC, animated: true, completion: nil)
+//        present(twoVC, animated: true, completion: nil)
+        
+        navigationController?.pushViewController(twoVC, animated: true)
     }
 }
