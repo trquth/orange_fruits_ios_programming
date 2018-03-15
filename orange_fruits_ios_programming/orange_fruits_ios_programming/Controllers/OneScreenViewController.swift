@@ -32,4 +32,24 @@ class OneScreenViewController: UIViewController {
         
         navigationController?.pushViewController(twoVC, animated: true)
     }
+    
+    @IBAction func sixNavigationButton(_ sender: Any) {
+        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SixScreen" )else{
+            print("View controller Six not found")
+            return
+        }
+//        navigationController?.pushViewController(SixScreenViewController(), animated: true)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func sixModalButton(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SixScreen" )else{
+            print("View controller Six not found")
+            return
+        }
+//        present(SixScreenViewController(), animated: true, completion: nil)
+        present(vc, animated: true, completion: nil)
+    }
 }
