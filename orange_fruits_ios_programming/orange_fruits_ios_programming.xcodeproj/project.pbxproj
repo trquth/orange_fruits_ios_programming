@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E7CF9E9139F7FAD37B7E867 /* Pods_orange_fruits_ios_programming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6AD9D15133BC1CCE73E0F34 /* Pods_orange_fruits_ios_programming.framework */; };
 		6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */; };
 		6E098F531FE1773F008A97D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F511FE1773F008A97D0 /* Main.storyboard */; };
 		6E098F581FE1773F008A97D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F561FE1773F008A97D0 /* LaunchScreen.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5ED39AFA76B00F940EF10B /* Pods-orange_fruits_ios_programming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orange_fruits_ios_programming.release.xcconfig"; path = "Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming.release.xcconfig"; sourceTree = "<group>"; };
 		6E098F4A1FE1773F008A97D0 /* orange_fruits_ios_programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orange_fruits_ios_programming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E098F521FE1773F008A97D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		6E098F591FE1773F008A97D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E11B9BE2059541700DA7A37 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6E8B035620580FCD005CC32E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6AD9D15133BC1CCE73E0F34 /* Pods_orange_fruits_ios_programming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_orange_fruits_ios_programming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4CA51E9351F8BABD202D3F /* Pods-orange_fruits_ios_programming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orange_fruits_ios_programming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7CF9E9139F7FAD37B7E867 /* Pods_orange_fruits_ios_programming.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B6704312B96929D9A6D13E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD9D15133BC1CCE73E0F34 /* Pods_orange_fruits_ios_programming.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53E438180686DBC86C2B3D28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED4CA51E9351F8BABD202D3F /* Pods-orange_fruits_ios_programming.debug.xcconfig */,
+				0D5ED39AFA76B00F940EF10B /* Pods-orange_fruits_ios_programming.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E098F411FE1773F008A97D0 = {
 			isa = PBXGroup;
 			children = (
 				6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */,
 				6E098F4B1FE1773F008A97D0 /* Products */,
+				53E438180686DBC86C2B3D28 /* Pods */,
+				4B6704312B96929D9A6D13E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +91,7 @@
 		6E11B9C02059634A00DA7A37 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6EFC2748205AB00100753AED /* Home */,
 				6E124ADE2058090100EB9D27 /* SignIn */,
 			);
 			path = Controllers;
@@ -89,6 +114,13 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		6EFC2748205AB00100753AED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E098F5C1FE1773F008A97D0 /* Build configuration list for PBXNativeTarget "orange_fruits_ios_programming" */;
 			buildPhases = (
+				0597A83C36E175E266308BEC /* [CP] Check Pods Manifest.lock */,
 				6E098F461FE1773F008A97D0 /* Sources */,
 				6E098F471FE1773F008A97D0 /* Frameworks */,
 				6E098F481FE1773F008A97D0 /* Resources */,
+				1CB17B210E52E78907424791 /* [CP] Embed Pods Frameworks */,
+				0FD736EAE313D5F1B12074E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +190,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0597A83C36E175E266308BEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-orange_fruits_ios_programming-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FD736EAE313D5F1B12074E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CB17B210E52E78907424791 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E098F461FE1773F008A97D0 /* Sources */ = {
@@ -297,6 +388,7 @@
 		};
 		6E098F5D1FE1773F008A97D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED4CA51E9351F8BABD202D3F /* Pods-orange_fruits_ios_programming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +403,7 @@
 		};
 		6E098F5E1FE1773F008A97D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5ED39AFA76B00F940EF10B /* Pods-orange_fruits_ios_programming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -24,6 +24,8 @@ class SignInViewController: UIViewController {
     //Prive methods
     
    @objc private func signInTap(){
-        print("PRESS HERE")
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+        }
     }
 }
