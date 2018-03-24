@@ -1,0 +1,6 @@
+framework module Pods_orange_fruits_ios_programming {
+  umbrella header "Pods-orange_fruits_ios_programming-umbrella.h"
+
+  export *
+  module * { export * }
+}

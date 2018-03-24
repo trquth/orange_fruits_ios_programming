@@ -15,10 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UINavigationController(rootViewController: NetworkingTableController())
-        self.window?.makeKeyAndVisible()
+        
+         customizeAppearance()
         
         return true
     }
@@ -45,6 +43,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    private
+    
+    func customizeAppearance() {
+        customizeStatusBar()
+        customizeTabBar()
+        customizeNavBar()
+    }
+    
+    func customizeStatusBar() {
+        let width = UIScreen.main.bounds.width
+        
+        let statusBarView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 20))
+        statusBarView.backgroundColor = UIColor.primary
+        
+        window?.rootViewController?.view.addSubview(statusBarView)
+    }
+    
+    func customizeTabBar() {
+        UITabBar.appearance().tintColor = UIColor.primary
+        UITabBar.appearance().barTintColor = UIColor.white
+    }
+    
+    func customizeNavBar() {
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = UIColor.primary
+        
+        let backButtonImage = UIImage(named: "Back")
+        
+        UINavigationBar.appearance().backIndicatorImage = backButtonImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    }
 }
 
