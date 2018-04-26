@@ -1,6 +1,6 @@
-//
+    //
 //  AppDelegate.swift
-//  orange_fruits_ios_programming
+//  orange_fruits_ios_programming.
 //
 //  Created by Thien Tran on 12/13/17.
 //  Copyright © 2017 Thien Tran. All rights reserved.
@@ -15,10 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UINavigationController(rootViewController: NetworkingTableController())
-        self.window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
+        
+        window?.rootViewController = TabBarConfigurationViewController()
+        
+        application.statusBarStyle = .lightContent
+        customizeAppearance()
         
         return true
     }
@@ -45,6 +49,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func customizeAppearance() {
+        customizeStatusBar()
+    }
+    
+    func customizeStatusBar() {
+        
+        let statusBarView = UIView()
+        statusBarView.backgroundColor = UIColor.primary
+        statusBarView.translatesAutoresizingMaskIntoConstraints = false
+        
+        window?.addSubview(statusBarView)
+       
+        let view = ["v1": statusBarView]
+        
+        window?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: view))
+         window?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1(20)]", options: [], metrics: nil, views: view))
+    }
+    
+    
 
 }
 
