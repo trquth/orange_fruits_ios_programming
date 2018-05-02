@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductViewController: UIViewController, UIScrollViewDelegate {
+class ProductViewController: BaseViewController, UIScrollViewDelegate {
     
     let widthScreen = UIScreen.main.bounds.width
     let productID = 51
@@ -89,7 +89,8 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         topBorder.backgroundColor = UIColor.gray.cgColor
         topBorder.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1)
         view.layer.addSublayer(topBorder)
-       
+        
+        view.addToCartButton.addTarget(self, action: #selector(addToCartHandle), for: .touchUpInside)
         return view
     }()
     
@@ -106,13 +107,11 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
                      "v3" : listImageProductsView,
                      "v4" : footerProductView
         ]
-        let height = ( UIScreen.main.bounds.height - 60 )/2
-        
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v4]|", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-60-[v1]", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v1][v4(60)]|", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v1][v4(45)]|", options: [], metrics: nil, views: views))
         productScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[v2(==v1)]", options: [], metrics: nil, views: views))
         productScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v3(==v1)]|", options: [], metrics: nil, views: views))
         productScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v2]|", options: [], metrics: nil, views: views))
@@ -158,5 +157,48 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
     @objc func goBack() {
         navigationController?.popViewController(animated: true)
     }
-
+    
+    @objc func addToCartHandle(){
+        if !Order.hasCurrentOrder {
+            OrdersApiClient.createOrder({
+                order in Order.currentOrder = order
+                self.addProductToCart()
+            }, failure: { apiError in
+                NSLog("Error during add to cart")
+            }
+            )
+        }else {
+            addProductToCart()
+        }
+        
+    }
+    
+    func addProductToCart() {
+        
+        var productDic = Dictionary<String, Any>()
+        var varientDic = [String: Any]()
+        varientDic["name"] = product?.name
+        varientDic["images"] = product?.imageURLs
+        productDic["id"] = product?.id
+        productDic["variant"] = varientDic
+        productDic["quantity"] = 1
+        productDic["price"] = product?.price ?? 0
+        productDic["total"] = product?.price ?? 0
+        
+        CartApiClient.addLineItemMode(_data:  Order(fromDic: productDic),
+                                      success: {
+                                        () in
+                                        let ac = UIAlertController.init(title: "Message", message: "Item has been added successfully to your cart.", preferredStyle: .alert)
+                                        let okButton = UIAlertAction.init(title: "OK", style: .default, handler: {act in NSLog("Press OK button")})
+                                        ac.addAction(okButton)
+                                        self.present(ac, animated: true, completion: nil)
+                                        self.tabBarController?.tabBar.isHidden = false
+                                        self.footerProductView.isHidden = true
+                                        self.refreshCartItemBadgeCount()
+                                        
+        },failure: {
+            err in NSLog("ERROR")
+        })
+    }
+    
 }

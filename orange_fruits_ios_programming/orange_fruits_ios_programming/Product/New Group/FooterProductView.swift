@@ -26,19 +26,18 @@ class FooterProductView : UIView {
         var buttonAttributeString = NSAttributedString(string: "ADD TO CART",
                                                        attributes: [NSAttributedStringKey.foregroundColor : UIColor.black])
         var buttonHighLightAttributeString = NSAttributedString(string: "ADD TO CART",
-                                                       attributes: [NSAttributedStringKey.foregroundColor : UIColor.gray])
+                                                                attributes: [NSAttributedStringKey.foregroundColor : UIColor.gray])
         //button.setTitle("SELECT", for: .normal)
-       // button.setTitle("UNSELECT", for: .highlighted)
+        // button.setTitle("UNSELECT", for: .highlighted)
         //button.setTitleColor(UIColor.black, for: .normal)
         button.setAttributedTitle(buttonAttributeString, for: .normal)
         button.setAttributedTitle(buttonHighLightAttributeString, for: .highlighted)
         
-//        button.setBackgroundColor(color: .white, forState: .normal)
-//        button.setBackgroundColor(color: .gray, forState: .highlighted)
+        //        button.setBackgroundColor(color: .white, forState: .normal)
+        //        button.setBackgroundColor(color: .gray, forState: .highlighted)
         //button.setTitleColor(UIColor.red, for: .highlighted)
         button.backgroundColor = .white
         button.showsTouchWhenHighlighted = true
-        button.addTarget(self, action: #selector(didAddToCart(btn:)), for: .touchUpInside)
         
         return button
     }()
@@ -67,9 +66,4 @@ class FooterProductView : UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v2]|", options: [], metrics: nil, views: views))
     }
     
-    @objc func didAddToCart(btn : UIButton){
-        
-        print("ADD TO CART")
-        
-    }
 }
