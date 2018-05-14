@@ -6,6 +6,7 @@ target 'orange_fruits_ios_programming' do
   use_frameworks!
   pod 'Alamofire', '~> 4.0.0'
   pod 'SwiftyJSON', '~> 3.0.0'
+  pod 'RealmSwift'
   # Pods for orange_fruits_ios_programming
 
 end

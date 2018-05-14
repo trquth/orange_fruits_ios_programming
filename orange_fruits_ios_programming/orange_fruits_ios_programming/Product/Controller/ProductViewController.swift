@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ProductViewController: BaseViewController, UIScrollViewDelegate {
     
@@ -24,6 +25,9 @@ class ProductViewController: BaseViewController, UIScrollViewDelegate {
         setConstraintForProductInfo()
         
         fetchProduct()
+        
+        let realm = try! Realm()
+        print(realm.configuration.fileURL)
         
     }
     
@@ -90,7 +94,7 @@ class ProductViewController: BaseViewController, UIScrollViewDelegate {
         topBorder.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1)
         view.layer.addSublayer(topBorder)
         
-        view.addToCartButton.addTarget(self, action: #selector(addToCartHandle), for: .touchUpInside)
+        view.addToCartButton.addTarget(self, action: #selector(addProduct), for: .touchUpInside)
         return view
     }()
     
@@ -199,6 +203,27 @@ class ProductViewController: BaseViewController, UIScrollViewDelegate {
         },failure: {
             err in NSLog("ERROR")
         })
+    }
+    
+   @objc func addProduct() {
+        var obj = OrderModel()
+        
+        if let productName = product?.name {
+            obj.productName = productName
+        }else{
+            obj.productName = ""
+        }
+        
+        if let price = product?.price {
+             obj.price = 200000
+        }else{
+             obj.price = 0
+        }
+        
+       
+        obj.quantity = 1
+        obj.id = PrimaryKeyUtility.sharedInstance.generatePrimaryKey(OrderModel.self)
+        OrderService.shared.addProductToCart(obj)
     }
     
 }
