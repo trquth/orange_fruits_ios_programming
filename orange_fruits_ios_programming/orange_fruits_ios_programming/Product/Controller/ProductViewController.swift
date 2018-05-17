@@ -205,25 +205,36 @@ class ProductViewController: BaseViewController, UIScrollViewDelegate {
         })
     }
     
-   @objc func addProduct() {
-        var obj = OrderModel()
+    @objc func addProduct() {
         
-        if let productName = product?.name {
-            obj.productName = productName
-        }else{
-            obj.productName = ""
+        guard let productName = product?.name, let price = product?.price else {
+            return
         }
         
-        if let price = product?.price {
-             obj.price = 200000
-        }else{
-             obj.price = 0
+        OrderService.shared.getProductInCart(productName){ data in
+            if data == nil {
+                let obj = OrderModel()
+                obj.id = PrimaryKeyUtility.sharedInstance.generatePrimaryKey(OrderModel.self)
+                obj.productName = productName
+                obj.price = 120000
+                obj.quantity = 1
+                
+                OrderService.shared.addProductToCart(obj){
+                    print("Insert Successfully")
+                }
+                
+            }else{
+                
+                guard var obj = data else {
+                    return
+                }
+                
+                OrderService.shared.updateQuantityProductOfCart(obj, type: .Increase){
+                    print("Update Successfully")
+                }
+               
+            }            
         }
-        
-       
-        obj.quantity = 1
-        obj.id = PrimaryKeyUtility.sharedInstance.generatePrimaryKey(OrderModel.self)
-        OrderService.shared.addProductToCart(obj)
     }
     
 }

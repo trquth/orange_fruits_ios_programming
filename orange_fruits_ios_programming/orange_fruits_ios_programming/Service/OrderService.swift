@@ -9,37 +9,61 @@
 import Foundation
 import RealmSwift
 
+enum UpdateType : Int {
+    case Increase = 1
+    case Decrease = 0
+}
+
 class OrderService {
     
     init() {}
     static let shared = OrderService()
     var realm = try! Realm()
     
-    func addProductToCart(_ product : OrderModel) {
+    func addProductToCart(_ product : OrderModel, complete : (() -> ())?) {
         do {
             try realm.write {
                 realm.add(product)
+                if let handler = complete {
+                    handler()
+                }
             }
         } catch  {
             print("Can't add product to card")
         }
     }
     
-    func updateQuantityProductInCart(_ obj: OrderModel, quantity: Int) {
+    func updateQuantityProductOfCart(_ obj: OrderModel,type: UpdateType, complete : (() ->())?) {
         do {
             try realm.write {
-                realm.add(obj, update: true)
+               type == UpdateType.Increase ?  (obj.quantity += 1) : (obj.quantity -= 1)
+                if(obj.quantity < 1000 && obj.quantity > 0){
+                    realm.add(obj, update: true)
+                }
+                
+                if let handler = complete {
+                    handler()
+                }
             }
         } catch  {
             print("Having error during update data")
         }
     }
     
-//    func findProductInCart(_ name: String) -> OrderModel {
-//        do {
-//            try realm.objects(OrderModel).f
-//        } catch  {
-//            print("Having error during find data")
-//        }
-//    }
+    func getAllProductsInCart() -> Results<OrderModel>{
+         return realm.objects(OrderModel.self)
+    }
+    
+    func getProductInCart(_ name : String, complete : ((OrderModel?) -> ())?) -> OrderModel? {
+        let predicate = NSPredicate(format: "productName = %@", name)
+        let result = realm.objects(OrderModel.self).filter(predicate).first as? OrderModel
+        
+        guard let callback = complete else {
+            return result
+        }
+        
+        callback(result)
+        
+        return result
+    }
 }

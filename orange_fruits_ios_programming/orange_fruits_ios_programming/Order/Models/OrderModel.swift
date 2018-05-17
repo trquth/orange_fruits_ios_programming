@@ -19,4 +19,10 @@ class OrderModel : Object {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    override static func indexedProperties() -> [String] {
+        return ["productName"]
+    }
+    
+    
 }
