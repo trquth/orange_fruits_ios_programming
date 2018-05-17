@@ -35,7 +35,7 @@ class TabBarConfigurationViewController: UITabBarController {
     func customTabBar(){
         let tabBar = TabBar()
         self.setValue(tabBar, forKey: "tabBar")
-        self.selectedIndex = 0
+        self.selectedIndex = 1
     }
 
 }
