@@ -20,7 +20,7 @@ class TabBarConfigurationViewController: UITabBarController {
         nav.tabBarItem.title = "Home"
         self.addChildViewController(nav)
         
-        let cartVC = UIViewController()
+        let cartVC = CartViewController()
         cartVC.title = "Card"
         let nav2 = NavigationConfigurationController(rootViewController: cartVC)
         nav2.tabBarItem.image = UIImage(named: "Cart")
