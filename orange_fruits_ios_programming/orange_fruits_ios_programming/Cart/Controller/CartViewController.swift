@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CartViewController: UIViewController {
     
     private let Item_Cart = "ItemCart"
+    private var orders : [OrderModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,9 @@ class CartViewController: UIViewController {
         cartCollection.register(ItemCartCollectionViewCell.self, forCellWithReuseIdentifier: Item_Cart)
         
         setupViews()
+        getOrderedProduct()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +55,11 @@ class CartViewController: UIViewController {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: views))
     }
     
+    func getOrderedProduct() -> [OrderModel] {
+        orders = OrderService.shared.getAllProductsInCart()
+        return orders
+    }
+    
 }
 
 extension CartViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -60,7 +70,7 @@ extension CartViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return orders.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

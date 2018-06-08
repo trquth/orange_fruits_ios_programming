@@ -50,8 +50,8 @@ class OrderService {
         }
     }
     
-    func getAllProductsInCart() -> Results<OrderModel>{
-         return realm.objects(OrderModel.self)
+    func getAllProductsInCart() -> [OrderModel]{
+         return realm.objects(OrderModel.self).toArray(ofType: OrderModel.self)
     }
     
     func getProductInCart(_ name : String, complete : ((OrderModel?) -> ())?) -> OrderModel? {

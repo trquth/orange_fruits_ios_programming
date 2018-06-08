@@ -31,7 +31,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         self.layer.addSublayer(borderTop)
     }
     
-    let thumbnailImage : UIImageView = {
+   lazy var thumbnailImage : UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
     
@@ -39,7 +39,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    let productNameLabel : UILabel = {
+     lazy var productNameLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -47,7 +47,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let qtyLabel : UILabel = {
+     lazy var qtyLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -57,7 +57,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let qtyValueLabel : UILabel = {
+     lazy var qtyValueLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -65,7 +65,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let totalPrice : UILabel = {
+     lazy var totalPrice : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -73,7 +73,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let increaseButton : UIButton = {
+     lazy var increaseButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -82,7 +82,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return button
     }()
     
-    let descreaseButton : UIButton = {
+     lazy var descreaseButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -91,7 +91,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return button
     }()
     
-    let removeButton : UIButton = {
+     lazy var removeButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -110,7 +110,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         addSubview(totalPrice)
         addSubview(removeButton)
         
-        let views = ["v1": thumbnailImage,
+        let views : [String : Any] = ["v1": thumbnailImage,
                      "v2": productNameLabel,
                      "v3": qtyLabel,
                      "v4": increaseButton,
