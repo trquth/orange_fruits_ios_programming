@@ -24,6 +24,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBarController?.tabBar.isHidden = false
 
         self.collectionView.register(CategoriesCell.self, forCellWithReuseIdentifier: categoriesCellId)
         self.collectionView.register(CategoryOfferCell.self, forCellWithReuseIdentifier: categoryOfferCellId)

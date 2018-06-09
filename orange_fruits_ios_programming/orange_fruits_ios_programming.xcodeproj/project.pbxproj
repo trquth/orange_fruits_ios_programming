@@ -494,7 +494,6 @@
 				6E098F471FE1773F008A97D0 /* Frameworks */,
 				6E098F481FE1773F008A97D0 /* Resources */,
 				E36525C84A978027EF2A02DF /* [CP] Embed Pods Frameworks */,
-				059E410EA2425FB2673E7BAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -553,21 +552,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		059E410EA2425FB2673E7BAE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E5BFBCA307041416CF24642 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

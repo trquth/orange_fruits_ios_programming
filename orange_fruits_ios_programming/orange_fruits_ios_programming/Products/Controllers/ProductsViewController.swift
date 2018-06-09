@@ -24,7 +24,6 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(true, animated: false)
         
         setUpViews()
@@ -33,6 +32,10 @@ class ProductsViewController: UIViewController {
         
         setProductView(to: .List)
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {

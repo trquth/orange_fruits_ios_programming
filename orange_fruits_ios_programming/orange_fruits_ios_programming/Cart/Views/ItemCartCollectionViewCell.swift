@@ -8,7 +8,34 @@
 
 import UIKit
 
+protocol CartCellDelegate {
+    func updateQty(_ id: Int,_ type: UpdateType,  complete : @escaping () -> ())
+}
+
 class ItemCartCollectionViewCell: UICollectionViewCell {
+    
+    var delegate : CartCellDelegate?
+    
+    var model : OrderModel? {
+        didSet{
+            if let id = model?.id {
+                self.tag = id
+
+            }
+            thumbnailImage.image = UIImage(named: "Product")
+            productNameLabel.text = model?.productName
+            if let quantity = model?.quantity {
+                  qtyValueLabel.text = String(describing : quantity)
+            }
+            if let totalPriceValue = model?.price {
+                totalPrice.text = String(describing : totalPriceValue)
+            }
+            increaseButton.addTarget(self, action: #selector(increaseQuantity), for: .touchUpInside)
+            decreaseButton.addTarget(self, action: #selector(decreaseQuantity), for: .touchUpInside)
+          
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -29,6 +56,19 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         borderTop.frame = CGRect(x: 0, y: 0, width: self.frame.width - 1, height: 1)
         borderTop.backgroundColor = UIColor.lightGray.cgColor
         self.layer.addSublayer(borderTop)
+    }
+    
+    @objc func increaseQuantity(){
+        
+        delegate?.updateQty(tag, .Increase ){
+            print("Increase Quantity")
+        }
+    }
+    
+    @objc func decreaseQuantity(){
+        delegate?.updateQty(tag, .Decrease ){
+            print("Decrease Quantity")
+        }
     }
     
    lazy var thumbnailImage : UIImageView = {
@@ -82,7 +122,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         return button
     }()
     
-     lazy var descreaseButton : UIButton = {
+     lazy var decreaseButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -106,7 +146,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         addSubview(qtyLabel)
         addSubview(increaseButton)
         addSubview(qtyValueLabel)
-        addSubview(descreaseButton)
+        addSubview(decreaseButton)
         addSubview(totalPrice)
         addSubview(removeButton)
         
@@ -115,7 +155,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
                      "v3": qtyLabel,
                      "v4": increaseButton,
                      "v5": qtyValueLabel,
-                     "v6": descreaseButton,
+                     "v6": decreaseButton,
                      "v7": totalPrice,
                      "v8": removeButton]
         
@@ -138,7 +178,7 @@ class ItemCartCollectionViewCell: UICollectionViewCell {
         qtyLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         increaseButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         qtyValueLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        descreaseButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        decreaseButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         removeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
     }

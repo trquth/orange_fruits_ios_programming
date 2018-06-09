@@ -37,5 +37,4 @@ class TabBarConfigurationViewController: UITabBarController {
         self.setValue(tabBar, forKey: "tabBar")
         self.selectedIndex = 1
     }
-
 }

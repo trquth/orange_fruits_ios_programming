@@ -229,9 +229,9 @@ class ProductViewController: BaseViewController, UIScrollViewDelegate {
                     return
                 }
                 
-                OrderService.shared.updateQuantityProductOfCart(obj, type: .Increase){
-                    print("Update Successfully")
-                }
+//                OrderService.shared.updateProductQuantity(obj, .Increase){
+//                    print("Update Successfully")
+//                }
                
             }            
         }
