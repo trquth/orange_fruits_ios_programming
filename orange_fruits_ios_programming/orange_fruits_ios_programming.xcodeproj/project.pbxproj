@@ -33,6 +33,9 @@
 		6E81A57F20922DD9007D953F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E81A57E20922DD9007D953F /* UIButton+Extensions.swift */; };
 		6E89CC60209DB72900CCA0A5 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89CC5F209DB72900CCA0A5 /* OrderModel.swift */; };
 		6E89CC64209DB9BB00CCA0A5 /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89CC63209DB9BB00CCA0A5 /* OrderService.swift */; };
+		6E93FEE220D45E5A00C60710 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93FEE120D45E5A00C60710 /* ColorPickerViewController.swift */; };
+		6E93FEE420D45EFE00C60710 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93FEE320D45EFE00C60710 /* ViewController.swift */; };
+		6E93FEE620D46F3E00C60710 /* ColorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93FEE520D46F3E00C60710 /* ColorPickerDelegate.swift */; };
 		6EB03010207BB08E001940B6 /* GridProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0300F207BB08E001940B6 /* GridProductCell.swift */; };
 		6EB03012207BB732001940B6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB03011207BB732001940B6 /* Product.swift */; };
 		6EB03014207BB8E8001940B6 /* ProductGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB03013207BB8E8001940B6 /* ProductGridFlowLayout.swift */; };
@@ -96,6 +99,9 @@
 		6E81A57E20922DD9007D953F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		6E89CC5F209DB72900CCA0A5 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		6E89CC63209DB9BB00CCA0A5 /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		6E93FEE120D45E5A00C60710 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		6E93FEE320D45EFE00C60710 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E93FEE520D46F3E00C60710 /* ColorPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDelegate.swift; sourceTree = "<group>"; };
 		6EB0300F207BB08E001940B6 /* GridProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProductCell.swift; sourceTree = "<group>"; };
 		6EB03011207BB732001940B6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6EB03013207BB8E8001940B6 /* ProductGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridFlowLayout.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 		6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */ = {
 			isa = PBXGroup;
 			children = (
+				6E93FEDF20D45D8D00C60710 /* CodePath */,
 				6E89CC62209DB9A600CCA0A5 /* Service */,
 				6ECD54F4209289C40096C76D /* Order */,
 				6E727AF22081125D00B2D0AA /* Product */,
@@ -310,6 +317,24 @@
 				6EF5E3A720CB344100B51AEB /* Results.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		6E93FEDF20D45D8D00C60710 /* CodePath */ = {
+			isa = PBXGroup;
+			children = (
+				6E93FEE020D45DBC00C60710 /* PassingDataEventsPropagate */,
+			);
+			path = CodePath;
+			sourceTree = "<group>";
+		};
+		6E93FEE020D45DBC00C60710 /* PassingDataEventsPropagate */ = {
+			isa = PBXGroup;
+			children = (
+				6E93FEE120D45E5A00C60710 /* ColorPickerViewController.swift */,
+				6E93FEE320D45EFE00C60710 /* ViewController.swift */,
+				6E93FEE520D46F3E00C60710 /* ColorPickerDelegate.swift */,
+			);
+			path = PassingDataEventsPropagate;
 			sourceTree = "<group>";
 		};
 		6EA93BFF208790430069BD94 /* Categories */ = {
@@ -632,6 +657,7 @@
 				6EEA021D2069356A00B303BA /* BaseApiClient.swift in Sources */,
 				6EB736E72088EBD9005718EE /* ProductDescriptionView.swift in Sources */,
 				6ECD54F7209289E70096C76D /* Order.swift in Sources */,
+				6E93FEE420D45EFE00C60710 /* ViewController.swift in Sources */,
 				6E15CEB92093DA0000D7E63F /* LineItem.swift in Sources */,
 				6E1E35AC2065E44200A4BE24 /* TabBarConfigurationViewController.swift in Sources */,
 				6E89CC64209DB9BB00CCA0A5 /* OrderService.swift in Sources */,
@@ -652,9 +678,11 @@
 				6E236AA22094A43B003FD231 /* BaseViewController.swift in Sources */,
 				6E1E35B52065EF1600A4BE24 /* TabBar.swift in Sources */,
 				6EBB4C0320ADD07200E1F9D2 /* ItemCartCollectionViewCell.swift in Sources */,
+				6E93FEE620D46F3E00C60710 /* ColorPickerDelegate.swift in Sources */,
 				6ECC89382073B23D00CD90F9 /* ListProductCell.swift in Sources */,
 				6EB736E92088F3DE005718EE /* ImageGallery.swift in Sources */,
 				6EEA021B2069354E00B303BA /* PageApiClient.swift in Sources */,
+				6E93FEE220D45E5A00C60710 /* ColorPickerViewController.swift in Sources */,
 				6E08816A20664C50005C362B /* BrandOfferCell.swift in Sources */,
 				6EB7F05320729107004F092D /* BaseCell.swift in Sources */,
 				6EB03010207BB08E001940B6 /* GridProductCell.swift in Sources */,
