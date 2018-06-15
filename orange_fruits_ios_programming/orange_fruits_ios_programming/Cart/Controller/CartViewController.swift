@@ -9,10 +9,13 @@
 import UIKit
 import RealmSwift
 
+
+
 class CartViewController: UIViewController {
     
     private let Item_Cart = "ItemCart"
     private var orders : [OrderModel] = []
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +62,22 @@ class CartViewController: UIViewController {
         orders = OrderService.shared.getAllProductsInCart()
         return orders
     }
+
+    
+}
+
+extension CartViewController : CartCellDelegate {
+    
+    func updateQty(_ id: Int, _ type: UpdateType, complete: @escaping () -> ()) {
+        
+        OrderService.shared.updateProductQuantity(id, type ) {
+            print("Update product quantity has been called")
+            self.cartCollection.reloadData()
+            
+        }
+        complete()
+    }
+    
     
 }
 
@@ -76,6 +95,8 @@ extension CartViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: Item_Cart, for: indexPath) as! ItemCartCollectionViewCell
+        cell.model = orders[indexPath.row]
+        cell.delegate = self
         return cell
     }
     

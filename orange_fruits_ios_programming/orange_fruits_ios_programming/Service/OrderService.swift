@@ -33,17 +33,25 @@ class OrderService {
         }
     }
     
-    func updateQuantityProductOfCart(_ obj: OrderModel,type: UpdateType, complete : (() ->())?) {
+    func updateProductQuantity(_ id: Int,_ type: UpdateType, complete :@escaping () -> ()) {
         do {
             try realm.write {
-               type == UpdateType.Increase ?  (obj.quantity += 1) : (obj.quantity -= 1)
-                if(obj.quantity < 1000 && obj.quantity > 0){
-                    realm.add(obj, update: true)
+                var obj = realm.objects(OrderModel.self).filter(NSPredicate(format: "id == %d", id)).first as? OrderModel
+                if let model = obj {
+                    
+                    switch type {
+                        case .Increase : if(model.quantity < 1000){ model.quantity += 1}
+                        case .Decrease : if(model.quantity > 0){ model.quantity -= 1}
+                        default : print("Can't update product quantity")
+                    }
+                        
+                    if(model.quantity < 1000 && model.quantity > 0){
+                        type == UpdateType.Increase ?  () : ()
+                        realm.add(model, update: true)
+                    }
+                      complete()
                 }
-                
-                if let handler = complete {
-                    handler()
-                }
+              
             }
         } catch  {
             print("Having error during update data")
