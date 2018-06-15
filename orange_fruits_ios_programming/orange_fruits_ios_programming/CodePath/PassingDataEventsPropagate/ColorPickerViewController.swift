@@ -8,6 +8,9 @@
 
 import UIKit
 
+let ColorPickerNotification = "com.caicho.orange-fruits-ios-programming.ColorPickerViewController.didPickColor"
+let ColorPickerSelectedColorKey = "com.caicho.orange-fruits-ios-programming.ColorPickerViewController.selectedColor"
+
 class ColorPickerViewController: UIViewController {
     
     let colors = [
@@ -69,7 +72,7 @@ class ColorPickerViewController: UIViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.orange.cgColor
         
-        button.addTarget(self, action: #selector(confirmButtonTap), for: .touchUpInside)
+        button.addTarget(self, action: #selector(confirmButtonTapNotificationCenter), for: .touchUpInside)
         
         return button
     }()
@@ -89,6 +92,13 @@ class ColorPickerViewController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
+    @objc func confirmButtonTapNotificationCenter(){
+        var selectionInfo = Dictionary<String, UIColor>()
+        if let selectedColor = colorFromSelection(){
+            selectionInfo[ColorPickerSelectedColorKey] = selectedColor
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ColorPickerNotification), object: self, userInfo: selectionInfo)
+    }
     
     
     override func didReceiveMemoryWarning() {

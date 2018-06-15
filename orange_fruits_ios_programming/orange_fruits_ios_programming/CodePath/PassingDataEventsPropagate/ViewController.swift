@@ -19,7 +19,7 @@ class ViewController: UIViewController, ColorPickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
         
         view.addSubview(button)
@@ -33,7 +33,7 @@ class ViewController: UIViewController, ColorPickerDelegate {
         view.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -52,19 +52,33 @@ class ViewController: UIViewController, ColorPickerDelegate {
         return button
     }()
     
-   @objc func openColorPicker() {
-//        let colorPickerVC = ColorPickerViewController()
-//        colorPickerVC.delegate = self
-        colorPickerVC.doneHandler = {(color: UIColor?) -> Void in
-            if let selectedColor = color {
-                self.view.backgroundColor = selectedColor
-            }
+    @objc func openColorPicker() {
+        let colorPickerVC = ColorPickerViewController()
+        //delegate
+        //        colorPickerVC.delegate = self
+        //closure
+        //        colorPickerVC.doneHandler = {(color: UIColor?) -> Void in
+        //            if let selectedColor = color {
+        //                self.view.backgroundColor = selectedColor
+        //            }
+        //        }
+        //NSNotificationCenter
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: ColorPickerNotification), object: nil, queue:OperationQueue.main){
+            (notification : Notification!) -> Void in
+            let userInfo = notification?.userInfo
+            let selectedColor : UIColor? = userInfo?[ColorPickerSelectedColorKey] as? UIColor
+            self.didPickColor(color: selectedColor)
         }
         colorPickerVC.initialColor = view.backgroundColor
         present(colorPickerVC, animated: true, completion: nil)
     }
     
+    func didPickColor(color : UIColor?){
+        if let selectedColor = color {
+            view.backgroundColor = selectedColor
+        }
+        dismiss(animated: true, completion: nil)
+    }
     
     
-
 }
