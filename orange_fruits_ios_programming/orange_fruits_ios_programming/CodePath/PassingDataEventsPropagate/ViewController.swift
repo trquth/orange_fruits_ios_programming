@@ -53,10 +53,18 @@ class ViewController: UIViewController, ColorPickerDelegate {
     }()
     
    @objc func openColorPicker() {
-        let colorPickerVC = ColorPickerViewController()
-        colorPickerVC.delegate = self
+//        let colorPickerVC = ColorPickerViewController()
+//        colorPickerVC.delegate = self
+        colorPickerVC.doneHandler = {(color: UIColor?) -> Void in
+            if let selectedColor = color {
+                self.view.backgroundColor = selectedColor
+            }
+        }
         colorPickerVC.initialColor = view.backgroundColor
         present(colorPickerVC, animated: true, completion: nil)
     }
+    
+    
+    
 
 }

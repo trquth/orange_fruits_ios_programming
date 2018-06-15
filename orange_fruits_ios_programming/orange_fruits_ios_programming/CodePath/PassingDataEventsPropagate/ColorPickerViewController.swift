@@ -18,6 +18,7 @@ class ColorPickerViewController: UIViewController {
     
     var initialColor : UIColor?
     weak var delegate : ColorPickerDelegate?
+    var doneHandler : ((UIColor?) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,8 +82,11 @@ class ColorPickerViewController: UIViewController {
         return nil
     }
     
-   @objc func confirmButtonTap(){
-        delegate?.colorPicker(picker: self, didPickColor: self.colorFromSelection())
+    @objc func confirmButtonTap(){
+       // delegate?.colorPicker(picker: self, didPickColor: self.colorFromSelection())
+        //closure
+        doneHandler?(self.colorFromSelection())
+        dismiss(animated: false, completion: nil)
     }
     
     
