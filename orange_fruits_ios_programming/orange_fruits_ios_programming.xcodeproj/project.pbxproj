@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FD099320D766DB00A6371E /* CustomCodePathTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD099220D766DB00A6371E /* CustomCodePathTabbarViewController.swift */; };
 		6E044D152069465500571ECA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044D142069465500571ECA /* UIImageView+Extensions.swift */; };
 		6E08816A20664C50005C362B /* BrandOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E08816920664C50005C362B /* BrandOfferCell.swift */; };
 		6E08816D20668AF0005C362B /* TitleNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E08816C20668AF0005C362B /* TitleNavBarView.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FD099220D766DB00A6371E /* CustomCodePathTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCodePathTabbarViewController.swift; sourceTree = "<group>"; };
 		43BAA1CB9049276852D0B5AB /* Pods-orange_fruits_ios_programming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orange_fruits_ios_programming.release.xcconfig"; path = "Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming.release.xcconfig"; sourceTree = "<group>"; };
 		6E044D142069465500571ECA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		6E08816920664C50005C362B /* BrandOfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandOfferCell.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04FD099120D7666800A6371E /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				04FD099220D766DB00A6371E /* CustomCodePathTabbarViewController.swift */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
 		6E08816E2066B5D5005C362B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 		6E93FEDF20D45D8D00C60710 /* CodePath */ = {
 			isa = PBXGroup;
 			children = (
+				04FD099120D7666800A6371E /* CustomTabbar */,
 				6E93FEE720D496C700C60710 /* FormInput */,
 				6E93FEE020D45DBC00C60710 /* PassingDataEventsPropagate */,
 			);
@@ -692,6 +703,7 @@
 				6E89CC64209DB9BB00CCA0A5 /* OrderService.swift in Sources */,
 				6EC54F5320D5197000CBED04 /* PreferenceSwitchCellDelegate.swift in Sources */,
 				6EEA021F206935C200B303BA /* HomePage.swift in Sources */,
+				04FD099320D766DB00A6371E /* CustomCodePathTabbarViewController.swift in Sources */,
 				6E89CC60209DB72900CCA0A5 /* OrderModel.swift in Sources */,
 				6EEA02222069362B00B303BA /* ApiError.swift in Sources */,
 				6ED7C134206BDF7D00E9C20A /* CategoriesCell.swift in Sources */,
