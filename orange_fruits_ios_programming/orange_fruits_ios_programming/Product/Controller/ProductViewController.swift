@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ProductViewController: BaseViewController, UIScrollViewDelegate {
+class ProductViewController: Base1ViewController, UIScrollViewDelegate {
     
     let widthScreen = UIScreen.main.bounds.width
     let productID = 51
