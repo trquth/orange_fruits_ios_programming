@@ -10,7 +10,7 @@ import UIKit
 
 class FormViewController: UIViewController {
 
-    var preferences : Preferences {
+    var preferences : Preferences?{
         didSet{
             updateLabels()
         }
@@ -83,9 +83,14 @@ class FormViewController: UIViewController {
     }
     
     private func updateLabels(){
-        autoRefreshLbl.text = "Auto Refresh : \(preferences.autoRefresh ? "Yes" : "No")"
-        playSoundsLbl.text = "Play Sounds : \(preferences.playSounds ? "Yes" : "No")"
-        showPhotosLbl.text = "Show Photos : : \(preferences.showPhotos ? "Yes" : "No")"
+        guard let preferencesValue = preferences else {
+            return
+        }
+        
+        autoRefreshLbl.text = "Auto Refresh : \(preferencesValue.autoRefresh ? "Yes" : "No")"
+        playSoundsLbl.text = "Play Sounds : \(preferencesValue.playSounds ? "Yes" : "No")"
+        showPhotosLbl.text = "Show Photos : : \(preferencesValue.showPhotos ? "Yes" : "No")"
+        
     }
     
     func setupViews() {
@@ -116,12 +121,4 @@ class FormViewController: UIViewController {
          editPreferenceBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 
-}
-
-extension FormViewController : FormViewDelegate {
-    func reloadFormView(preferenceData: Preferences) {
-        self.preferences = preferenceData
-    }
-    
-    
 }

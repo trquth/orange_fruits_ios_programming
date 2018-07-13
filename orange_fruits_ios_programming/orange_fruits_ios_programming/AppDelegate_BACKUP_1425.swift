@@ -20,7 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
+<<<<<<< HEAD
         window?.rootViewController = UINavigationController(rootViewController  : FormViewController())
+=======
+        self.mainTabBarVC = MainTabBarViewController();
+        self.window?.rootViewController = self.mainTabBarVC;
+>>>>>>> aacb83cd517f69be9892e0c273db3da0375e5094
         
         application.statusBarStyle = .lightContent
         customizeAppearance()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController : UIViewController{
+class Base1ViewController : UIViewController{
     
     override func viewDidLoad() {
         refreshCartItemBadgeCount()
