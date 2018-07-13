@@ -22,6 +22,8 @@ class FormViewController: UIViewController {
         updateLabels()
         setupViews()
         
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +77,7 @@ class FormViewController: UIViewController {
     
     @objc func gotoPreferences() {
         let  preferencesTableVC = PreferencesViewController()
+        preferencesTableVC.delegate = self
         self.navigationController?.pushViewController(preferencesTableVC, animated: true)
 //        present(preferencesTableVC, animated: true, completion: nil)
     }

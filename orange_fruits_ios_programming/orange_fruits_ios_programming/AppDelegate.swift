@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UINavigationController(rootViewController  :FormViewController())
+        window?.rootViewController = UINavigationController(rootViewController  : FormViewController())
         
         application.statusBarStyle = .lightContent
         customizeAppearance()

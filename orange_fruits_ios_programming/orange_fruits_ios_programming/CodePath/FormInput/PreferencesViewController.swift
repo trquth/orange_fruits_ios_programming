@@ -34,6 +34,7 @@ class PreferencesViewController: UIViewController {
     }
     
     var delegate :  FormViewDelegate?
+    var formDelegate : FormViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,8 @@ class PreferencesViewController: UIViewController {
         preferentcesTable.delegate = self
         preferentcesTable.dataSource = self
         currentPrefs = currentPrefs ?? Preferences()
+        
+        formDelegate?.reloadFormView(preferenceData: Preferences())
         
         
     }
