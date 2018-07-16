@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tabbars</key>
+	<array>
+        <dict>
+            <key>Title</key>
+            <string>Location</string>
+            <key>SelectedImg</key>
+            <string>locationhighlighticon</string>
+            <key>NormalImg</key>
+            <string>locationnormalicon</string>
+            <key>ClassName</key>
+            <string>MainViewController</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>Location</string>
+            <key>SelectedImg</key>
+            <string>restaurantnormalicon</string>
+            <key>NormalImg</key>
+            <string>restauranthighlighticon</string>
+            <key>ClassName</key>
+            <string>MainViewController</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>Location</string>
+            <key>SelectedImg</key>
+            <string>homeicon</string>
+            <key>NormalImg</key>
+            <string>homeicon</string>
+            <key>ClassName</key>
+            <string>MainViewController</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>Location</string>
+            <key>SelectedImg</key>
+            <string>newsnormalicon</string>
+            <key>NormalImg</key>
+            <string>newshighlighticon</string>
+            <key>ClassName</key>
+            <string>MainViewController</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>Location</string>
+            <key>SelectedImg</key>
+            <string>favournormalicon</string>
+            <key>NormalImg</key>
+            <string>favourhighlighticon</string>
+            <key>ClassName</key>
+            <string>MainViewController</string>
+        </dict>
+	</array>
+	
+</dict>
+</plist>
