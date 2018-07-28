@@ -59,7 +59,7 @@ class  MainTabBarController: UITabBarController {
         self.tabBar.isHidden = true;
         mainTabBarView = MainTabBarView(frame: tabBarRect,tabbarConfigArr:tarbarConfigArr!);
        // mainTabBarView.delegate = self
-        self.view .addSubview(mainTabBarView)
+        self.view.addSubview(mainTabBarView)
     }
     
     func didChooseItem(itemIndex: Int) {
