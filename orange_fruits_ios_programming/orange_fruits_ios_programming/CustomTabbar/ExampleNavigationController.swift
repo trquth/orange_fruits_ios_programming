@@ -1,15 +1,15 @@
 //
-//  CustomNavigationController.swift
+//  ExampleNavigationController.swift
 //  orange_fruits_ios_programming
 //
-//  Created by Thien Tran on 7/28/18.
+//  Created by Thien Tran on 7/29/18.
 //  Copyright © 2018 Thien Tran. All rights reserved.
 //
 
 import UIKit
 
-class CustomNavigationController: UINavigationController {
-
+class ExampleNavigationController: UINavigationController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let appearance = UIBarButtonItem.appearance()
@@ -23,8 +23,7 @@ class CustomNavigationController: UINavigationController {
         #endif
         self.navigationBar.tintColor = UIColor.init(red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 1.0)
         self.navigationItem.title = "Example"
-        
-         UINavigationController.init(rootViewController: CustomMainTabBarViewController())
     }
-
+    
 }
+

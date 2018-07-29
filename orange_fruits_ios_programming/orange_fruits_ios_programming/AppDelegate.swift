@@ -12,13 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
- var mainTabBarVC:CustomNavigationController?
+ var mainTabBarVC:CustomMainTabBarViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.mainTabBarVC = CustomNavigationController();
+        self.mainTabBarVC = CustomMainTabBarViewController();
         self.window?.rootViewController = self.mainTabBarVC;
         window?.makeKeyAndVisible()
         
