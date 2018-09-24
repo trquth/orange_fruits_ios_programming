@@ -12,24 +12,39 @@ class  CustomTabBarNavigationController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.backgroundColor = .white
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         let firstScreen = UIViewController()
-        firstScreen.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "locationnormalicon"), selectedImage: UIImage(named : "locationhighlighticon"))
+        firstScreen.tabBarItem.tag = 1
+        firstScreen.tabBarItem.image = UIImage(named: "locationnormalicon")?.withRenderingMode(.alwaysOriginal)
+        firstScreen.tabBarItem.selectedImage = UIImage(named: "locationhighlighticon")?.withRenderingMode(.alwaysOriginal)
+        
+
         let firstTab = UINavigationController(rootViewController: firstScreen)
         
         let secondScreen = UIViewController()
-        secondScreen.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "restaurantnormalicon"), selectedImage: UIImage(named : "restauranthighlighticon"))
+        secondScreen.tabBarItem.tag = 2
+        secondScreen.tabBarItem.image = UIImage(named: "restaurantnormalicon")?.withRenderingMode(.alwaysOriginal)
+        secondScreen.tabBarItem.selectedImage = UIImage(named: "restauranthighlighticon")?.withRenderingMode(.alwaysOriginal)
+
         let secondTab = UINavigationController(rootViewController: secondScreen)
         
         let thirdScreen = UIViewController()
-        thirdScreen.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "newsnormalicon"), selectedImage: UIImage(named : "newshighlighticon"))
+        thirdScreen.tabBarItem.tag = 4
+        thirdScreen.tabBarItem.image = UIImage(named: "newsnormalicon")?.withRenderingMode(.alwaysOriginal)
+        thirdScreen.tabBarItem.selectedImage = UIImage(named: "newshighlighticon")?.withRenderingMode(.alwaysOriginal)
+
         let thirdTab = UINavigationController(rootViewController: thirdScreen)
         
         let fourthScreen = UIViewController()
-        fourthScreen.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "favournormalicon"), selectedImage: UIImage(named : "favourhighlighticon"))
+        fourthScreen.tabBarItem.tag = 5 
+        fourthScreen.tabBarItem.image = UIImage(named: "favournormalicon")?.withRenderingMode(.alwaysOriginal)
+        fourthScreen.tabBarItem.selectedImage = UIImage(named: "favourhighlighticon")?.withRenderingMode(.alwaysOriginal)
+        
         let fourthTab = UINavigationController(rootViewController: fourthScreen)
         
         self.viewControllers = [firstTab, secondTab, thirdTab,fourthTab]
@@ -45,7 +60,7 @@ class  CustomTabBarNavigationController: UITabBarController {
         menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
         menuButton.frame = menuButtonFrame
         
-        menuButton.backgroundColor = UIColor.red
+        menuButton.backgroundColor = UIColor(red: 49/255, green: 136/255, blue: 250/255, alpha: 1)
         menuButton.layer.cornerRadius = menuButtonFrame.height/2
         view.addSubview(menuButton)
         
