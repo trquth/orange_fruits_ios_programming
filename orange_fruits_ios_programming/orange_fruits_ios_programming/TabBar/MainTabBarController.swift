@@ -8,16 +8,33 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController , MainTabBarDelegate{
+    
+  
 
     private var mainTabBarView : MainTabBarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let firstScreen = FirstViewController()
+        let secondScreen = SecondViewController()
+        let fourthScreen = FourthViewController()
+        
+         self.viewControllers = [firstScreen,secondScreen,fourthScreen]
+        
+        self.selectedIndex = 1
+        
         mainTabBarView = MainTabBarView(frame: self.tabBar.frame)
+        mainTabBarView.delegate = self
         self.view.addSubview(mainTabBarView)
     }
+    
+    func didChooseItem(itemIndex: Int) {
+        self.selectedIndex = itemIndex
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
