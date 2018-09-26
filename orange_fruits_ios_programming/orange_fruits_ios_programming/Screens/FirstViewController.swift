@@ -14,7 +14,12 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        
+        
+        let menuBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
+        menuBtn.setImage(UIImage(named: "drawmenuicon")?.withRenderingMode(.alwaysOriginal), for: UIControlState.normal)
+        menuBtn.setImage(UIImage(named: "drawmenuicon"), for: UIControlState.highlighted)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: menuBtn)
     }
 
     override func didReceiveMemoryWarning() {

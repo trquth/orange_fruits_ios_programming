@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F9C60A215B265200F1CD9D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9C609215B265200F1CD9D /* MainViewController.swift */; };
+		04F9C60C215B75B900F1CD9D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9C60B215B75B900F1CD9D /* NavigationController.swift */; };
 		6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */; };
 		6E098F501FE1773F008A97D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F4F1FE1773F008A97D0 /* ViewController.swift */; };
 		6E098F531FE1773F008A97D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F511FE1773F008A97D0 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04F9C609215B265200F1CD9D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		04F9C60B215B75B900F1CD9D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		6E098F4A1FE1773F008A97D0 /* orange_fruits_ios_programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orange_fruits_ios_programming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E098F4F1FE1773F008A97D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04F9C607215B259400F1CD9D /* TabBarAndNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				04F9C608215B263000F1CD9D /* Main */,
+			);
+			path = TabBarAndNavBar;
+			sourceTree = "<group>";
+		};
+		04F9C608215B263000F1CD9D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				04F9C609215B265200F1CD9D /* MainViewController.swift */,
+				04F9C60B215B75B900F1CD9D /* NavigationController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		6E098F411FE1773F008A97D0 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +89,7 @@
 		6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */ = {
 			isa = PBXGroup;
 			children = (
+				04F9C607215B259400F1CD9D /* TabBarAndNavBar */,
 				6EF6911920F9626900913A97 /* Screens */,
 				6EF6911620F9603100913A97 /* TabBar */,
 				6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */,
@@ -189,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F9C60C215B75B900F1CD9D /* NavigationController.swift in Sources */,
 				6EF6911820F9604500913A97 /* CustomTabBarNavigationController.swift in Sources */,
 				6E098F501FE1773F008A97D0 /* ViewController.swift in Sources */,
 				6EEE653C21591DFC00E56E9A /* MainTabBarController.swift in Sources */,
@@ -198,6 +221,7 @@
 				6EF6911D20F962A200913A97 /* SecondViewController.swift in Sources */,
 				6EF6911B20F9628200913A97 /* FirstViewController.swift in Sources */,
 				6EF6912120F962D300913A97 /* FifthViewController.swift in Sources */,
+				04F9C60A215B265200F1CD9D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
