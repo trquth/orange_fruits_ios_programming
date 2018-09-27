@@ -16,11 +16,15 @@ class MainViewController: UIViewController {
     private var middleView : UIView!
     private var rootViewController : UITabBarController!
     private var menuViewController : UIViewController!
+    
+    private var panGesture = UIPanGestureRecognizer()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initMain()
-
+        addPanGesture()
        
     }
 
@@ -51,8 +55,45 @@ class MainViewController: UIViewController {
         
         menuViewController = UIViewController()
         menuViewController.view.frame.origin.x =  -screenWidth
+        menuViewController.view.backgroundColor = UIColor.lightGray
+        
         self.view.addSubview(menuViewController.view)
         
         
+    }
+    
+    func  addPanGesture() {
+        panGesture.addTarget(self, action: #selector (self.panAction(_:)))
+        middleView.addGestureRecognizer(panGesture)
+    }
+
+   @objc func panAction(_ recognizer : UIPanGestureRecognizer) {
+        NSLog("X", recognizer.translation(in: self.view).x)
+        let offsetX = recognizer.translation(in: self.view).x
+    
+        if offsetX >= 0 {
+            menuViewController.view.frame.origin.x = -screenWidth + offsetX
+        }
+    
+    if  recognizer.state == .ended {
+        if offsetX > screenWidth * (0.64/2){
+            
+        }else{
+            showHome()
+        }
+    }
+    
+    }
+    
+    func showLeft()  {
+        
+    }
+    
+    func showHome()  {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.menuViewController.view.frame.origin.x = -self.screenWidth
+        })
+        
+        mainView.removeFromSuperview()
     }
 }

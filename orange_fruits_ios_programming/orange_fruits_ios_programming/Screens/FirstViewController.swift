@@ -16,15 +16,25 @@ class FirstViewController: UIViewController {
         self.view.backgroundColor = .red
         
         
-        let menuBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
-        menuBtn.setImage(UIImage(named: "drawmenuicon")?.withRenderingMode(.alwaysOriginal), for: UIControlState.normal)
-        menuBtn.setImage(UIImage(named: "drawmenuicon"), for: UIControlState.highlighted)
+        let menuBtn = UIButton(type: .custom)
+        menuBtn.setImage(UIImage(named: "drawmenuicon"), for: UIControlState.normal)
+        menuBtn.frame.size = CGSize(width: 20, height: 20)
+       menuBtn.imageView?.contentMode = .scaleAspectFit
+
+        menuBtn.contentMode = .center
+
+        
+      //  menuBtn.setImage(UIImage(named: "drawmenuicon"), for: UIControlState.highlighted)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: menuBtn)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func btnLeft() {
     }
     
 
