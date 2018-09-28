@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import Iconic
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
- var mainTabBarVC:CustomMainTabBarViewController?
+    
+    override init() {
+        super.init()
+        
+        FontAwesomeIcon.register()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.mainTabBarVC = CustomMainTabBarViewController();
-        self.window?.rootViewController = self.mainTabBarVC;
+        self.window?.rootViewController = HomeViewController();
         window?.makeKeyAndVisible()
         
         return true

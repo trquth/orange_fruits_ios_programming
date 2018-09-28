@@ -6,6 +6,6 @@ target 'orange_fruits_ios_programming' do
   use_frameworks!
 
   # Pods for orange_fruits_ios_programming
-  pod "ESTabBarController-swift"
+  pod 'Iconic', :git => 'https://github.com/zvving/Iconic.git', :branch => 'pod_config'
 
 end

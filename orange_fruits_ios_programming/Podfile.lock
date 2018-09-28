@@ -1,12 +1,22 @@
 PODS:
-  - ESTabBarController-swift (2.6.2)
+  - Iconic (1.3)
 
 DEPENDENCIES:
-  - ESTabBarController-swift
+  - Iconic (from `https://github.com/zvving/Iconic.git`, branch `pod_config`)
+
+EXTERNAL SOURCES:
+  Iconic:
+    :branch: pod_config
+    :git: https://github.com/zvving/Iconic.git
+
+CHECKOUT OPTIONS:
+  Iconic:
+    :commit: 9e9be59f4b84c0eadbd312282c35043cd9530aae
+    :git: https://github.com/zvving/Iconic.git
 
 SPEC CHECKSUMS:
-  ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
+  Iconic: 873ea0979c8180f9a16e2f25a94ead9cfc1a1951
 
-PODFILE CHECKSUM: 76dadd2b48232d0a8718868ecfc90870288db064
+PODFILE CHECKSUM: 1aa48bcab29d8acc4b911f19283a82925077e53f
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
