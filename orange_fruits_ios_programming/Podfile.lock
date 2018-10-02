@@ -1,22 +1,20 @@
 PODS:
-  - Iconic (1.3)
+  - SlideMenuControllerSwift (4.0.0)
+  - SwiftIconFont (2.8.0)
 
 DEPENDENCIES:
-  - Iconic (from `https://github.com/zvving/Iconic.git`, branch `pod_config`)
+  - SlideMenuControllerSwift
+  - SwiftIconFont
 
-EXTERNAL SOURCES:
-  Iconic:
-    :branch: pod_config
-    :git: https://github.com/zvving/Iconic.git
-
-CHECKOUT OPTIONS:
-  Iconic:
-    :commit: 9e9be59f4b84c0eadbd312282c35043cd9530aae
-    :git: https://github.com/zvving/Iconic.git
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SlideMenuControllerSwift
+    - SwiftIconFont
 
 SPEC CHECKSUMS:
-  Iconic: 873ea0979c8180f9a16e2f25a94ead9cfc1a1951
+  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+  SwiftIconFont: ddaccaa3bb90fc21ebc528cfdf793342618a5cc2
 
-PODFILE CHECKSUM: 1aa48bcab29d8acc4b911f19283a82925077e53f
+PODFILE CHECKSUM: 04977d576482c6a3cacfec6b6189cc4a39468614
 
 COCOAPODS: 1.5.0

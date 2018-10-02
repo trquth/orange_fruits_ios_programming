@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Iconic
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,14 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         
-        FontAwesomeIcon.register()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.window?.rootViewController = HomeViewController();
+        UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().isOpaque = true
+        
+        
+        let slideMenuController = SlideMenuController(mainViewController: HomeViewController(), leftMenuViewController: LeftMenuViewController())
+        let vc = UINavigationController(rootViewController: HomeViewController())
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        
         window?.makeKeyAndVisible()
         
         return true

@@ -6,6 +6,8 @@ target 'orange_fruits_ios_programming' do
   use_frameworks!
 
   # Pods for orange_fruits_ios_programming
-  pod 'Iconic', :git => 'https://github.com/zvving/Iconic.git', :branch => 'pod_config'
+  pod 'SwiftIconFont'
+  pod 'SlideMenuControllerSwift'
+
 
 end

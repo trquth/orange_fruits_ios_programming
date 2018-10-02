@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		041C9F65215E148F00B4BF13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C9F64215E148F00B4BF13 /* HomeViewController.swift */; };
+		047532B5216318C2007D2188 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047532B4216318C2007D2188 /* LeftMenuViewController.swift */; };
 		04CA2D5620FC86E90023AC3E /* TabBarConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CA2D5520FC86E90023AC3E /* TabBarConfig.plist */; };
 		6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */; };
 		6E098F531FE1773F008A97D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E098F511FE1773F008A97D0 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		041C9F64215E148F00B4BF13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		047532B4216318C2007D2188 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		04CA2D5520FC86E90023AC3E /* TabBarConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TabBarConfig.plist; sourceTree = "<group>"; };
 		2DB5DF7875773D5211219BAE /* Pods_orange_fruits_ios_programming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_orange_fruits_ios_programming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E098F4A1FE1773F008A97D0 /* orange_fruits_ios_programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orange_fruits_ios_programming.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +52,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		047532B3216318B0007D2188 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				047532B4216318C2007D2188 /* LeftMenuViewController.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
 		6E098F411FE1773F008A97D0 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		6E098F4C1FE1773F008A97D0 /* orange_fruits_ios_programming */ = {
 			isa = PBXGroup;
 			children = (
+				047532B3216318B0007D2188 /* LeftMenu */,
 				041C9F63215E147200B4BF13 /* Home */,
 				6E098F4D1FE1773F008A97D0 /* AppDelegate.swift */,
 				6EF6911520F95F7500913A97 /* Support */,
@@ -203,11 +214,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-orange_fruits_ios_programming/Pods-orange_fruits_ios_programming-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Iconic/Iconic.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftIconFont/SwiftIconFont.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Iconic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIconFont.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -223,6 +236,7 @@
 			files = (
 				6E098F4E1FE1773F008A97D0 /* AppDelegate.swift in Sources */,
 				041C9F65215E148F00B4BF13 /* HomeViewController.swift in Sources */,
+				047532B5216318C2007D2188 /* LeftMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
